@@ -2,14 +2,16 @@
 
 using namespace std;
 
-string Encrypt(const string &inMessage,const  string &key)
+string Encrypt( string &inMessage, string &key)
 {
 	vector<string> blocs;
 	// 1 - Transformer le message en tableau de blocs
-	Blockify(inMessage, blocs);
+	//Blockify(&inMessage, &blocs);
+
+	cout << "Le message est : " << inMessage << endl;
 
 	for(int i=0; i < blocs.size(); i++){
-		cout << "Bloc Numero " << i << " : " << blocs.at(i);
+		cout << "Bloc Numero " << i << " : " << blocs.at(i) << endl;
 	}
 
 	// 2 

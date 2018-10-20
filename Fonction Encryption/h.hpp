@@ -7,5 +7,5 @@
 
 using namespace std;
 
-string Encrypt(char *inMessage,char *key);
+string Encrypt(string &inMessage,string &key);
 void Blockify( string& msg, vector<string> blocs);
