@@ -8,4 +8,4 @@
 using namespace std;
 
 string Encrypt(string &inMessage,string &key);
-void Blockify( string& msg, vector<string> blocs);
+void Blockify( string& msg, vector<string>& blocs);

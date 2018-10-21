@@ -3,6 +3,8 @@
 #include<iomanip>
 #include<vector>
 
+#define INT_MAX 1000000000
+
 using namespace std;
 
 void printBytes(vector<string> v_s)
