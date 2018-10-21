@@ -70,7 +70,6 @@ int main(int argc, char **argv)
 
 	if (argc == 1)	// using thread
 	{
-
 		std::thread thClement(Clement, 2);
 		std::thread thBernard(Bernard);
 		// sleep to make sure Clement and bernard are started before Agnes
