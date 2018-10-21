@@ -7,5 +7,7 @@
 
 using namespace std;
 
-string Encrypt(string &inMessage,string &key);
-void Blockify( string& msg, vector<string>& blocs);
+string Encrypt(string &msg,string &key);
+
+//void Cipher(vector<string> &blocs, vector<string> &key);
+int Blockify( string& msg, vector<string>& blocs);
