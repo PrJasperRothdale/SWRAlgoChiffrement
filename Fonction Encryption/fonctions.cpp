@@ -28,7 +28,16 @@ string Encrypt( string &msg, string &key)
 	//Cipher(mblocs, kblocs);
 
 	grid = vstr_to_bitgrid(mblocs);
+
+	cout << "Original grid : " << endl;
+	out_grid(grid);
 	shift_rows(grid);
+	cout << "Shifted with 1 : " << endl;
+	out_grid(grid);
+	shift_rows(grid, -1);
+	cout << "Shifted with -1 : " << endl;
+	out_grid(grid);
+
 	
 
 	return msg;
@@ -81,53 +90,62 @@ void Cipher( vector<string> &blocs, vector<string> &key){
 
 
 }
+/*
+void unshift_rows(vector<vector<bitset<8>>> &grid){
+	vector<vector<int>> landing_points;
+	vector<vector<int>> landing_points_wf;
 
-void shift_rows(vector<vector<bitset<8>>> &grid){
+	vector<int> row;
+	landing_points = generate_landing_points(grid);
+	landing_points_wf = generate_landing_points(grid, -1 );
 
-	vector<int> landing_point;
-	bitset<8> elem;
+	out_2dint(landing_points);
+	out_2dint(landing_points_wf);
+
+
+}
+*/
+vector<vector<int>> generate_landing_points(vector<vector<bitset<8>>> &grid, int sfactor){
+
+	vector<vector<int>> landing_points;
+	vector<int> prow;
+	vector<int> row;
+
+	for (int i=0; i < grid.at(i).size(); i++){
+		for (int n=0; n < grid.at(i).size(); n++){
+			prow.push_back(n);
+		}
+	}
+
+	for (int d=0; d < grid.at(d).size(); d++){
+		for (int e=0; e < grid.at(d).size(); e++)
+			row.push_back(prow[e + (sfactor * d)%grid.at(d).size()]);
+		
+		landing_points.push_back(row);
+		row.clear();
+	}
+	return landing_points;
+
+}
+
+void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
+
 	vector<bitset<8>> new_row;
 
-	for (int i=0; i < grid.size(); i++){
-		for (int n=0; n < grid.at(i).size(); n++){
+	vector<vector<int>> landing_points;
+	vector<int> row;
+	landing_points = generate_landing_points(grid, sfactor);
 
-			switch (i % grid.at(i).size()) {
-				case 0:{
-					landing_point = {0,1,2,3};
-					break;
-				}
-				case 1:{
-					landing_point = {3,0,1,2};
-					break;
-				}
-				case 2:{
-					landing_point = {2,3,0,1};
-					break;
-				}
-				case 3:{
-					landing_point = {1,2,3,0};
-					break;
-				}
-			}
-			new_row.push_back(grid.at(i).at(landing_point[n]));
+	for (int i=0; i < grid.size(); i++){
+		row = landing_points.at(i%grid.at(i).size());
+		for (int n=0; n < grid.at(i).size(); n++){
+			new_row.push_back(grid.at(i).at(row[n]));
 		}
+		
 
 		grid.at(i) = new_row;
 		new_row.clear();
-
-
 	}
-
-/*////////////////////////////////////////////////////////////Affichage de la matrice
-	cout << endl << "Bits AFTER SHIFTING :" << endl << endl;
-	for (int i=0; i < grid.size() ; i++){
-		//cout << "Row N°" << i << " :";
-		for (int j=0; j < grid.at(i).size(); j++){
-			cout << grid.at(i).at(j) << " ";
-		}
-		cout << endl << endl;
-	}
-*/
 
 }
 
@@ -144,17 +162,6 @@ vector<vector<bitset<8>>> vstr_to_bitgrid(vector<string> &msg){
 		grid.push_back(row);
 		row.clear();
 	}
-/*/////////////////////////////////////////////////////////////////////Affichage de la matrice
-	cout << endl << "Bits BEFORE SHIFTING :" << endl << endl;
-	for (int i=0; i < grid.size() ; i++){
-		cout << "Row N°" << i << " :";
-		for (int j=0; j < grid.at(i).size(); j++){
-			cout << grid.at(i).at(j) << " ";
-		}
-		cout << endl;
-	}
-*/
-
 
 	return grid;
 
@@ -199,4 +206,26 @@ string grid_to_str( vector<vector<bitset<8>>> &grid){
 			ss << char(grid.at(i).at(n).to_ulong());
 		
 	return ss.str();
+}
+
+void out_grid(vector<vector<bitset<8>>> &grid){
+
+	for (int i=0; i < grid.size() ; i++){
+		cout << "Row " << i << "	: ";
+		for (int j=0; j < grid.at(i).size(); j++){
+			cout << grid.at(i).at(j) << " ";
+		}
+		cout << endl;
+	}
+}
+
+void out_2dint(vector<vector<int>> &vec){
+
+	for (int i=0; i < vec.size() ; i++){
+		cout << "Row " << i << "	: ";
+		for (int j=0; j < vec.at(i).size(); j++){
+			cout << vec.at(i).at(j) << " ";
+		}
+		cout << endl;
+	}
 }
