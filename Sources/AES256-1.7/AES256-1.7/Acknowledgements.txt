@@ -1,0 +1,16 @@
+The most basic part of the package, the encryption and decryption
+of 16 byte blocks is based on the C implementation of AES-256 by
+Ilya O. Levin and Hal Finney, which can be downloaded from
+
+   http://www.literatecode.com/aes256
+
+Test suites used for basic validation are supplied by NIST (National
+Institute of Standards and Technology) and can be downloaded from
+
+   http://csrc.nist.gov/groups/STM/cavp/#01
+
+"Dinghao" was so kind to let me know about a bug in the stringifi-
+cation of 'Byte_Block' objects when PKCS5/PKCS7 padding is used
+and supplied a patch.
+
+2018/01/03      Jens Thoms Törring    <jt@toerring.de>

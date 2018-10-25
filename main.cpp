@@ -1,42 +1,49 @@
-#include <thread>
-#include <iostream>
-
 #include "header.hpp"
 
-#define DEFAULT_BUFLEN 1024
+using namespace std;
 
-#define B_PORT "27015"
-#define B_ADRESS "127.0.0.1"
-
-#define C_PORT "27016"
-#define C_ADRESS "127.0.0.1"
-
-
-int Agnes()
+int main(int argc, char **argv)
 {
-	int errcode = 0;
+	if (!InitialiseWinsock())
+		return 1;
 
-
-	return errcode;
-}
-
-int Bernard()
-{
-	int errcode = 0;
-
-
-	return errcode;
-}
-
-int Clement(const int nbConnection)
-{
-	int errcode = 0;
-
-
-	return errcode;
-}
-
-int main(int argc, int char **argv)
-{
+    cout << "Initialisé\n";
 	
+	if (argc == 1)
+	{
+		thread thBernard(Bernard);
+		thread thClement(Clement);
+		// sleep to make sure Clement and bernard are started before Agnes
+		this_thread::sleep_for(chrono::milliseconds(1));
+		thread thAgnes(Agnes);
+
+		thAgnes.join();
+		thBernard.join();
+		thClement.join();
+	}
+	else if (argc == 2)
+	{
+		if (strcmp(argv[1], "-a") == 0)
+		{
+			Agnes();
+		}
+		else if (strcmp(argv[1], "-b") == 0)
+		{
+			Bernard();
+		}
+		else if (strcmp(argv[1], "-c") == 0)
+		{
+			Clement();
+		}
+		else
+		{
+			printf("Invalid argument: %s\n", argv[1]);
+			return 1;
+		}
+	}
+	
+
+
+	CleanupWinsock();
+	return 0;
 }
