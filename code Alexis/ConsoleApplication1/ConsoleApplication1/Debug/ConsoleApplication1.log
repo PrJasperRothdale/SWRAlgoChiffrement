@@ -1,2 +1,4 @@
-﻿  ConsoleApplication1.cpp
-  ConsoleApplication1.vcxproj -> C:\Users\Alexis74\Desktop\PROG\Code\C++\test\ConsoleApplication1\Debug\ConsoleApplication1.exe
+﻿  pch.cpp
+c:\users\alexis74\desktop\prog\code\c++\secuweb\swralgochiffrement\code alexis\consoleapplication1\consoleapplication1\pch.cpp(251): warning C4244: 'argument' : conversion de 'time_t' en 'unsigned int', perte possible de données
+  ConsoleApplication1.cpp
+  ConsoleApplication1.vcxproj -> C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\Debug\ConsoleApplication1.exe
