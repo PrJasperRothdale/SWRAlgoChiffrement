@@ -28,7 +28,65 @@ string Encrypt( string &msg, string &key)
 	//Cipher(mblocs, kblocs);
 
 	grid = vstr_to_bitgrid(mblocs);
+	//cout << endl << endl << "Avant Shifting :" << endl;
+	//out_grid(grid);
 
+	//row_sign(grid.at(0));
+
+	//mix_columns(grid);
+
+	cout << endl << "Matrice input :" << endl;
+	out_grid(grid);
+
+	mix_columns(grid);
+	shift_rows(grid);
+	mix_columns(grid);
+	shift_rows(grid);
+	mix_columns(grid);
+	shift_rows(grid);
+	mix_columns(grid);
+	shift_rows(grid);
+	mix_columns(grid);
+	shift_rows(grid);
+	mix_columns(grid);
+	shift_rows(grid);
+	mix_columns(grid);
+	shift_rows(grid);
+	mix_columns(grid);
+	shift_rows(grid);
+	mix_columns(grid);
+	shift_rows(grid);
+
+
+	cout << endl << "Crypto :" << endl;
+	out_grid(grid);
+
+	shift_rows(grid, -1);
+	mix_columns(grid);
+	shift_rows(grid, -1);
+	mix_columns(grid);
+	shift_rows(grid, -1);
+	mix_columns(grid);
+	shift_rows(grid, -1);
+	mix_columns(grid);
+	shift_rows(grid, -1);
+	mix_columns(grid);
+	shift_rows(grid, -1);
+	mix_columns(grid);
+	shift_rows(grid, -1);
+	mix_columns(grid);
+	shift_rows(grid, -1);
+	mix_columns(grid);
+	shift_rows(grid, -1);
+	mix_columns(grid);
+
+	cout << endl << "Matrice out :" << endl;
+	out_grid(grid);
+
+
+	//shift_rows(grid, -1);
+	//cout << endl << endl << "Apres Shifting :" << endl;
+	//out_grid(grid);
 	//mix_columns(grid);
 	//bitset<8> a('k');
 	//bitset<8> b('L');
@@ -49,7 +107,7 @@ string Encrypt( string &msg, string &key)
 	out_grid(grid);
 */
 	
-
+ 
 	return msg;
 }
 
@@ -70,11 +128,11 @@ int Blockify( string& msg, vector<string>& blocs){
 			msg.erase(0,1);
 
 	}
-
+/*
 	string tofill = blocs.at(blocs.size() - 1);
 	if (tofill.length() < _taille_bloc_)
 		tofill.resize(_taille_bloc_, '0');
-
+*/
 	return nbBlocs;
 }
 
@@ -115,6 +173,8 @@ void unshift_rows(vector<vector<bitset<8>>> &grid){
 
 }
 */
+
+/////////////////////////////////////////////////////////////////////////////// Ancienne gen lp
 vector<vector<int>> generate_landing_points(vector<vector<bitset<8>>> &grid, int sfactor){
 
 	vector<vector<int>> landing_points;
@@ -137,6 +197,8 @@ vector<vector<int>> generate_landing_points(vector<vector<bitset<8>>> &grid, int
 	return landing_points;
 
 }
+
+
 /*
 bitset<8> gamul(bitset<8> a, bitset<8> b) {
 
@@ -158,199 +220,131 @@ bitset<8> gamul(bitset<8> a, bitset<8> b) {
 	return a^b;
 }
 */
-/*
-void unmix_columns(vector<vector<bitset<8>>> &grid){
-
-	vector<vector<bitset<8>>> cg;
-	vector<vector<bitset<8>>> dg;
-	vector<vector<bitset<8>>> recipient;
-	vector<int> lp = {0,1,2,3};
-	vector<bitset<8>> row;
-	bitset<8> b;
-	unsigned char h;
-
-	cout << endl << "Matrice en entrée : " << endl << endl ;
-
-	out_grid(grid);
 
 
-	for (int i=0; i < grid.size(); i+=4){
-		for (int n=0; n < grid.at(i).size(); n++){
-		//cout << endl << "Valeur du bitset en i=" << i << " n=" << n  << " : ";
-			cg.at(i).at(n) = grid.at(i).at(n);
+void row_sign(vector<bitset<8>> &set){
 
-			h = (unsigned char)(char(grid.at(i).at(n).to_ulong()) >> 7);
-			dg.at(i).at(n) = grid.at(i).at(n) << 1;
-			dg.at(i).at(n) ^= 0x1B & h;
-		}
+	vector<bitset<8>> cset;
 
-		recipient.at(i) = dg[lp[0]] ^ cg[lp[3]] ^ cg[lp[2]] ^ dg[lp[1]] ^ cg[lp[1]];
-		recipient.at(i) = dg[lp[1]] ^ cg[lp[0]] ^ cg[lp[3]] ^ dg[lp[2]] ^ cg[lp[2]];
-		recipient.at(i) = dg[lp[2]] ^ cg[lp[1]] ^ cg[lp[0]] ^ dg[lp[3]] ^ cg[lp[3]];
-		recipient.at(i) = dg[lp[3]] ^ cg[lp[2]] ^ cg[lp[1]] ^ dg[lp[0]] ^ cg[lp[0]];
-	}
+	cset = set;
 
+	cset[0][7] = set[0][7];
+	cset[0][6] = set[0][6];
+	cset[0][5] = set[1][7];
+	cset[0][4] = set[1][6];
+	cset[0][3] = set[2][7];
+	cset[0][2] = set[2][6];
+	cset[0][1] = set[3][7];
+	cset[0][0] = set[3][6];
 
+	cset[1][7] = set[0][5];
+	cset[1][6] = set[0][4];
+	cset[1][5] = set[1][5];
+	cset[1][4] = set[1][4];
+	cset[1][3] = set[2][5];
+	cset[1][2] = set[2][4];
+	cset[1][1] = set[3][5];
+	cset[1][0] = set[3][4];	
 
-	vector<vector<bitset<8>>> recipient;
-	vector<bitset<8>> row;
-	bitset<8> b;
+	cset[2][7] = set[0][3];
+	cset[2][6] = set[0][2];
+	cset[2][5] = set[1][3];
+	cset[2][4] = set[1][2];
+	cset[2][3] = set[2][3];
+	cset[2][2] = set[2][2];
+	cset[2][1] = set[3][3];
+	cset[2][0] = set[3][2];
 
-	cout << endl << "Matrice en entrée reverse : " << endl << endl ;
+	cset[3][7] = set[0][1];
+	cset[3][6] = set[0][0];
+	cset[3][5] = set[1][1];
+	cset[3][4] = set[1][0];
+	cset[3][3] = set[2][1];
+	cset[3][2] = set[2][0];
+	cset[3][1] = set[3][1];
+	cset[3][0] = set[3][0];
 
-	out_grid(grid);
+	set = cset;
+
+}
+
+void mix_columns(vector<vector<bitset<8>>> &grid){
 
 	for (int i=0; i < grid.size(); i++){
-		for (int n=0; n < grid.at(i).size(); n++){
-		//cout << endl << "Valeur du bitset en i=" << i << " n=" << n  << " : ";
-
-			b[0] = grid.at(i).at(n)[n];
-			b[1] = grid.at(i).at(n)[(n+1)%grid.at(i).size()];
-			b[2] = grid.at(i).at(n)[(n+2)%grid.at(i).size()];
-			b[3] = grid.at(i).at(n)[(n+3)%grid.at(i).size()];
-			b[4] = grid.at(i).at(n)[(n+4)%grid.at(i).size()];
-			b[5] = grid.at(i).at(n)[(n+5)%grid.at(i).size()];
-			b[6] = grid.at(i).at(n)[(n+6)%grid.at(i).size()];
-			b[7] = grid.at(i).at(n)[(n+7)%grid.at(i).size()];
-
-
-			row.push_back(b);
-			b.reset();
-			//cout << " | ";
-		}
-		recipient.push_back(row);
-		row.clear();
-		//cout << endl;
+		row_sign(grid.at(i));
 	}
 
-	
-	cout << "String unmixed : " << grid_to_str(recipient) ;
 }
-*/
-/*
-//	La fonction a été développée avec l'assistance de la page Wikipédia 
-//	Rijndael MixColumns : https://en.wikipedia.org/wiki/Rijndael_MixColumns
-void mix_columns(vector<vector<bitset<8>>> &grid){
-	vector<vector<bitset<8>>> cg;
-	vector<vector<bitset<8>>> dg;
-	vector<vector<bitset<8>>> recipient;
-	vector<int> lp = {0,1,2,3};
-	vector<bitset<8>> row;
-	bitset<8> b;
-	unsigned char h;
-
-	cout << endl << "Matrice en entrée : " << endl << endl ;
-
-	out_grid(grid);
-
-
-	for (int i=0; i < grid.size(); i+=4){
-		for (int n=0; n < grid.at(i).size(); n++){
-		//cout << endl << "Valeur du bitset en i=" << i << " n=" << n  << " : ";
-			cg.at(i).at(n) = grid.at(i).at(n);
-
-			h = (unsigned char)(char(grid.at(i).at(n).to_ulong()) >> 7);
-			dg.at(i).at(n) = grid.at(i).at(n) << 1;
-			dg.at(i).at(n) ^= 0x1B & h;
-		}
-
-		//recipient.at(i) = dg[lp[0]] ^ cg[lp[3]] ^ cg[lp[2]] ^ dg[lp[1]] ^ cg[lp[1]];
-		//recipient.at(i) = dg[lp[1]] ^ cg[lp[0]] ^ cg[lp[3]] ^ dg[lp[2]] ^ cg[lp[2]];
-		//recipient.at(i) = dg[lp[2]] ^ cg[lp[1]] ^ cg[lp[0]] ^ dg[lp[3]] ^ cg[lp[3]];
-		//recipient.at(i) = dg[lp[3]] ^ cg[lp[2]] ^ cg[lp[1]] ^ dg[lp[0]] ^ cg[lp[0]];
-	}
-
-	cout << endl << "Matrice en sortie : " << endl << endl ;
-	out_grid(recipient);
-
-	cout << "After Mix : " << grid_to_str(recipient) << endl;
-	unmix_columns(recipient);
 
 
 
 
-/*
+vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor){
 
-			b[0] = grid.at(i).at(n)[n];
-			b[1] = grid.at(i).at((n+1)%grid.at(i).size())[n];
-			b[2] = grid.at(i).at((n+2)%grid.at(i).size())[n];
-			b[3] = grid.at(i).at((n+3)%grid.at(i).size())[n];
-			b[4] = grid.at(i).at((n+4)%grid.at(i).size())[n];
-			b[5] = grid.at(i).at((n+5)%grid.at(i).size())[n];
-			b[6] = grid.at(i).at((n+6)%grid.at(i).size())[n];
-			b[7] = grid.at(i).at((n+7)%grid.at(i).size())[n];
-
-			//cout << "B :" << b ;
-
-			for (int d=0; d < 8; d++){
-				b[d] = grid.at(i).at((n + d)%grid.at(i).size())[d/4];
-				//cout << b[d] << "[" << (n + d)%grid.at(i).size() << "," << d/4 << "]";
-
-
-////////////// Modele de manipulation
-				b[d] = grid.at(i).at(n)[0];
-				b[d+1] = grid.at(i).at(n+1)[0];
-				b[d+2] = grid.at(i).at(n+2)[0];
-				b[d+3] = grid.at(i).at(n+3)[0];
-				b[d+4] = grid.at(i).at(n)[1];
-				b[d+5] = grid.at(i).at(n+1)[1];
-				b[d+6] = grid.at(i).at(n+2)[1];
-				b[d+7] = grid.at(i).at(n+3)[1];
-
-
-				//cout << "<" << grid.at(n).at(d%grid.at(i).size()) << ">";
-			}
-
-
-			//%grid.at(i).at(n).size();
-
-			//cout << "[" << i << "," << n << "] ";
-			//cout << endl ;//<< "Bitmodel : <" ;
-			
-			for (int d=0; d < 8 ; d++){
-				b[d] = grid.at(i).at((d)%grid.at(i).size())[(d)%grid.at(i).size()];
-				//cout << (d)%grid.at(i).size() << ",";
-				//recipient.at(i).at(n)[d] = grid.at(i).at((n+d)%grid.at(i).at(n).size())[0];
-				
-			}
-			//cout << ">" << endl;
-
-			
-			row.push_back(b);
-			b.reset();
-
-			//cout << " | ";
-		}
-		recipient.push_back(row);
-		row.clear();
-		//cout << endl;
-	}
-
-	cout << endl << "Matrice en sortie : " << endl << endl ;
-	out_grid(recipient);
-
-	cout << "After Mix : " << grid_to_str(recipient) << endl;
-	unmix_columns(recipient);
-
-
-
-	vector<vector<bitset<8>>> copy_grid;
-	vector<vector<bitset<8>>> doubled_grid;
-
-	//unsigned char h;
+	vector<vector<int>> landing_points;
+	vector<int> prow;
+	vector<int> row;
 
 
 	for (int i=0; i < grid.at(i).size(); i++){
-		copy_grid[i] = grid[i];
-
-		//h = (unsigned char)((signed char)grid[])
+		prow.push_back(i);
 	}
+	
+	if (sfactor > 0){
+		for (int d=0; d < grid.size(); d++){
+			for (int e=0; e < grid.at(d).size(); e++)
+				row.push_back( (d + prow[e])%grid.size());
+
+			landing_points.push_back(row);
+			row.clear();
+		}
+	} else if (sfactor < 0){
+		for (int d=0; d < grid.size(); d++){
+			for (int e=0; e < grid.at(d).size(); e++){
+				int v = (d - prow[e]);
+				if (v < 0)
+					v = ((d - prow[e])%grid.size())+grid.at(d).size();
+				row.push_back( (v)%grid.size());
+			}
+			landing_points.push_back(row);
+			row.clear();
+		}
+	}
+/*
+	for (int d=0; d < grid.size(); d++){
+		for (int e=0; e < grid.at(d).size(); e++)
+			row.push_back( (d + prow[e])%grid.size());
+		
+		landing_points.push_back(row);
+		row.clear();
+	}
+*/
+	//cout << endl << "Land points : " << endl;
+	//out_2dint(landing_points);
+
+	return landing_points;
 
 }
-*/
 
 void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
 
+	vector<vector<bitset<8>>> n_val;
+	vector<bitset<8>> col;
+	n_val = grid;
+	vector<vector<int>> landing_points;
+
+	landing_points = lb_colshift(grid, sfactor);
+
+	for (int i=0; i < n_val.size() ; i++){
+		for (int n=0; n < n_val.at(i).size(); n++){
+			n_val.at(i).at(n) = grid.at(landing_points[i][n]).at(n);
+
+		}
+	}
+
+	grid = n_val;
+
+/* WORKING - Removed during coding
 	vector<bitset<8>> new_row;
 
 	vector<vector<int>> landing_points;
@@ -367,21 +361,31 @@ void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
 		grid.at(i) = new_row;
 		new_row.clear();
 	}
-
+*/
 }
 
 vector<vector<bitset<8>>> vstr_to_bitgrid(vector<string> &msg){
 
 	vector<vector<bitset<8>>> grid;
 	vector<bitset<8>> row;
+	bitset<8> bnull(0x0A);				//We are adding "Line Feed" instead of null here to help make the column and row tweaking easier
 
-	for (int x=0; x < msg.size(); x++){
-		for (int e=0; e < msg.at(x).size(); e++){
-			bitset<8> blet(msg.at(x).c_str()[e]);
+	int d;
+
+	for (int i=0; i < msg.size(); i++){
+		for (int n=0 ; n < msg.at(i).size(); n++){
+			bitset<8> blet(msg.at(i).c_str()[n]);
 			row.push_back(blet);
 		}
 		grid.push_back(row);
 		row.clear();
+	}
+
+	if ( grid.at(0).size() > grid.back().size()){
+		d = grid.at(0).size() - grid.back().size();
+		for ( d; d < msg.at(0).size(); d++){
+			grid.back().push_back(bnull);
+		}
 	}
 
 	return grid;
