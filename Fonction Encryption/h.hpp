@@ -18,6 +18,7 @@ vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor);
 bitset<8> gamul(bitset<8> a, bitset<8> b);
 vector<vector<bitset<8>>> vstr_to_bitgrid( vector<string> &msg);
 vector<vector<int>> generate_landing_points(vector<vector<bitset<8>>> &grid);
+void extend_key_set(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key);
 void row_sign(vector<bitset<8>> &set);
 void out_2dint(vector<vector<int>> &vec);
 void out_grid(vector<vector<bitset<8>>> &grid);
