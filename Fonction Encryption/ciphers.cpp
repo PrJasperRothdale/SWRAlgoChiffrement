@@ -28,60 +28,56 @@ string Encrypt( string &msg, string &key)
 	//Cipher(mblocs, kblocs);
 
 	grid = vstr_to_bitgrid(mblocs);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
 	//cout << endl << endl << "Avant Shifting :" << endl;
 	//out_grid(grid);
 
-	//row_sign(grid.at(0));
-
-	//mix_columns(grid);
 
 	cout << endl << "Matrice input :" << endl;
 	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
 
-	mix_columns(grid);
+	//mix_columns(grid);
 	shift_rows(grid);
-	mix_columns(grid);
-	shift_rows(grid);
-	mix_columns(grid);
-	shift_rows(grid);
-	mix_columns(grid);
-	shift_rows(grid);
-	mix_columns(grid);
-	shift_rows(grid);
-	mix_columns(grid);
-	shift_rows(grid);
-	mix_columns(grid);
-	shift_rows(grid);
-	mix_columns(grid);
-	shift_rows(grid);
-	mix_columns(grid);
-	shift_rows(grid);
-
-
-	cout << endl << "Crypto :" << endl;
+	cout << endl << "Crypto 1 :" << endl;
 	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
+
+	//mix_columns(grid);
+	shift_rows(grid);
+	cout << endl << "Crypto 2 :" << endl;
+	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
+
+	//mix_columns(grid);
+	shift_rows(grid);
+	cout << endl << "Crypto 3 :" << endl;
+	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
 
 	shift_rows(grid, -1);
-	mix_columns(grid);
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	shift_rows(grid, -1);
-	mix_columns(grid);
+	//mix_columns(grid);
+	cout << endl << "Crypto -3 :" << endl;
+	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
 
+	shift_rows(grid, -1);
+	//mix_columns(grid);
+	cout << endl << "Crypto -2 :" << endl;
+	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
+
+	shift_rows(grid, -1);
+	//mix_columns(grid);
+	cout << endl << "Crypto -1 :" << endl;
+	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
+
+	//shift_rows(grid, -1);
+	//mix_columns(grid);
 	cout << endl << "Matrice out :" << endl;
 	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
 
 
 	//shift_rows(grid, -1);
@@ -368,7 +364,7 @@ vector<vector<bitset<8>>> vstr_to_bitgrid(vector<string> &msg){
 
 	vector<vector<bitset<8>>> grid;
 	vector<bitset<8>> row;
-	bitset<8> bnull(0x0A);				//We are adding "Line Feed" instead of null here to help make the column and row tweaking easier
+	bitset<8> bnull(0x00);
 
 	int d;
 
@@ -381,12 +377,14 @@ vector<vector<bitset<8>>> vstr_to_bitgrid(vector<string> &msg){
 		row.clear();
 	}
 
-	if ( grid.at(0).size() > grid.back().size()){
-		d = grid.at(0).size() - grid.back().size();
-		for ( d; d < msg.at(0).size(); d++){
+	if ( grid.back().size() < grid.front().size()){
+		d = grid.front().size() - grid.back().size();
+		for (int x=0; x < d ; x++)
 			grid.back().push_back(bnull);
-		}
+		
 	}
+
+
 
 	return grid;
 
