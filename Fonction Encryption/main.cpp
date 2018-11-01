@@ -12,7 +12,7 @@ int main(int argc, char *argv[])
 	}
 
 	string msg (argv[1]);
-	string k ("12341234");
+	string k ("12344321");
 
 	Encrypt(msg,k);
 
