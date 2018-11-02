@@ -5,8 +5,6 @@
 
 #include "pch.h"
 
-using namespace std;
-
 // Need to link with Ws2_32.lib
 #pragma comment (lib, "Ws2_32.lib")
 
@@ -201,39 +199,47 @@ int receiveFrom(SOCKET& socket, std::string& outMessage)
 }
 
 
-//se connecte puis boucle tant que le message n'est pas envoyé
-void envoieA(std::string adresse, std::string port, std::string& message)
-{
-	std::string status;
-	do {
-		SOCKET socket = INVALID_SOCKET;
 
-		if (connectTo(socket, adresse, port))
+void keyGen(std::string &pubKey, std::string priKey) {
+
+	long long p = 3;
+	long long q = 7;
+	long n = p * q;
+	long count;
+	long long totient = (p - 1)*(q - 1);
+
+	long long e = 2;
+
+	while (e < totient)
+	{
+		count = gcd(e, totient);
+		if (count == 1)
 		{
-			if (sendTo(socket, message))
-				status = "Envoyé";
-			else
-				status = "Erreur";
+			break;
 		}
-	} while (status == "Erreur");
+		else
+			e++;
+	}
 
+	long long d;
+	long long k = 2;
+	d = (1 + (k*totient)) / e;
+	
 }
 
-std::string recevoir(std::string port)//boucle tant que l'on ne recoit rien
+
+
+int gcd(int a, int b)
 {
-	SOCKET listenSocket = INVALID_SOCKET;
-
-
-	std::string message = "";
-	do {
-			do
-			{
-			} while (receiveFrom(listenSocket, message) > 0);
-
-			
-	}while (ListenTo(listenSocket, port));
-
-	closeSocket(listenSocket);
-	return message;
+	while (a != b)
+	{
+		if (a > b)
+			a -= b;
+		else
+			b -= a;
+	}
+	return a;
 }
+
+
 //----------------------------------------

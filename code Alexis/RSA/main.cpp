@@ -17,25 +17,6 @@ int lcm(long a, long b);
 long gcd(long a, long b);
 void genKey(long &e, long &d, long &n);
 
-int main()
-{
-	long  e, d, n;
-	string message;
-
-	genKey(e,d,n);
-
-	message = "test";
-
-	string encMes = encrypt(e, message, n);
-
-	cout << encMes << endl;
-
-	string decMes = decrypt(d, encMes, n);
-
-	cout << decMes << endl;
-
-	cin >> message;
-}
 
 void genKey(long &e, long &d, long &n)
 {
@@ -124,4 +105,24 @@ long rpng(long min, long max)
 	}while(prime(rdnum) == 0);
 
 	return rdnum;
+}
+
+int main()
+{
+	long  e, d, n;
+	string message;
+
+	genKey(e,d,n);
+
+	message = "test";
+
+	string encMes = encrypt(e, message, n);
+
+	cout << encMes << endl;
+
+	string decMes = decrypt(d, encMes, n);
+
+	cout << decMes << endl;
+
+	cin >> message;
 }
