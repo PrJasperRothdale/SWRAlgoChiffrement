@@ -9,13 +9,17 @@
 #ifndef PCH_H
 #define PCH_H
 
+#include <iostream>
+#include <thread>
 #include <winsock2.h>
 #include <ws2tcpip.h>
 #include <stdio.h>
+#include <vector> 
+#include <time.h>   
+#include <windows.h>
+
 
 #include <string>
-
-using namespace std;
 
 //Fonctions réseaux
 bool InitialiseWinsock();
@@ -28,7 +32,8 @@ bool closeSocket(SOCKET& socket);
 bool sendTo(SOCKET& socket, const std::string& inMessage);
 int receiveFrom(SOCKET& socket, std::string& outMessage);
 
-void envoieA(std::string& adresse, std::string& port, std::string& message);
-std::string recevoir(std::string port);
 
+bool keyGenerator(std::string& priKey, std::string& pubKey);
+
+int gcd(int a, int b);
 #endif //PCH_H

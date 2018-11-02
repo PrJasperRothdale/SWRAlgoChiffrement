@@ -1,2 +1,375 @@
-﻿  ConsoleApplication1.cpp
-  ConsoleApplication1.vcxproj -> C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\Debug\ConsoleApplication1.exe
+﻿La génération a démarré 01/11/2018 15:34:51.
+     1>Projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" sur le nœud 2 (Rebuild cible(s)).
+     1>Génération à l'aide des outils version "15.0".
+       Cible "EnableIntermediateOutputPathMismatchWarning" ignorée en raison d'une fausse condition ; ('$(RestoreProjectStyle)' == 'PackageReference') a été évaluée comme ('' == 'PackageReference').
+     1>Cible "_CheckForInvalidConfigurationAndPlatform" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "SetTelemetryEnvironmentVariables" en dépend) :
+       Tâche "Error" ignorée en raison d'une fausse condition ; ( '$(_InvalidConfigurationError)' == 'true' ) a été évaluée comme ( '' == 'true' ).
+       Tâche "Warning" ignorée en raison d'une fausse condition ; ( '$(_InvalidConfigurationWarning)' == 'true' ) a été évaluée comme ( '' == 'true' ).
+       Utilisation de la tâche "Message" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "Message"
+         Configuration=Debug
+       Exécution de la tâche "Message" terminée.
+       Tâche "Message"
+         Platform=Win32
+       Exécution de la tâche "Message" terminée.
+       Tâche "Error" ignorée en raison d'une fausse condition ; ('$(OutDir)' != '' and !HasTrailingSlash('$(OutDir)')) a été évaluée comme ('C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\Debug\' != '' and !HasTrailingSlash('C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\Debug\')).
+       Tâche "Error" ignorée en raison d'une fausse condition ; ('$(BaseIntermediateOutputPath)' != '' and !HasTrailingSlash('$(BaseIntermediateOutputPath)')) a été évaluée comme ('obj\' != '' and !HasTrailingSlash('obj\')).
+       Tâche "Error" ignorée en raison d'une fausse condition ; ('$(IntermediateOutputPath)' != '' and !HasTrailingSlash('$(IntermediateOutputPath)')) a été évaluée comme ('Debug\' != '' and !HasTrailingSlash('Debug\')).
+       Tâche "Error" ignorée en raison d'une fausse condition ; ( '$(_InitialMSBuildProjectExtensionsPath)' != '' And '$(MSBuildProjectExtensionsPath)' != '$(_InitialMSBuildProjectExtensionsPath)' ) a été évaluée comme ( 'C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\obj\' != '' And 'C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\obj\' != 'C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\obj\' ).
+       Tâche "Warning" ignorée en raison d'une fausse condition ; ( '$(EnableBaseIntermediateOutputPathMismatchWarning)' == 'true' And '$(_InitialBaseIntermediateOutputPath)' != '$(BaseIntermediateOutputPath)' And '$(BaseIntermediateOutputPath)' != '$(MSBuildProjectExtensionsPath)' ) a été évaluée comme ( '' == 'true' And 'obj\' != 'obj\' And 'obj\' != 'C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\obj\' ).
+     1>Génération de la cible "_CheckForInvalidConfigurationAndPlatform" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "_CheckForInvalidConfigurationAndPlatform" ignorée. Elle a été générée.
+     1>Cible "SetTelemetryEnvironmentVariables" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.DesignTime.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Rebuild" en dépend) :
+       Utilisation de la tâche "SetEnv" à partir de l'assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
+       Tâche "SetEnv"
+         VSTEL_SolutionSessionID={2ACFB1CE-5363-4852-9B8B-1650097D7083}
+       Exécution de la tâche "SetEnv" terminée.
+       Tâche "SetEnv"
+         VSTEL_CurrentSolutionBuildID=19373343
+       Exécution de la tâche "SetEnv" terminée.
+       Tâche "SetEnv"
+         VSTEL_ProjectID={6C473FB1-EBFD-45CE-B523-C5C572565F5A}
+       Exécution de la tâche "SetEnv" terminée.
+     1>Génération de la cible "SetTelemetryEnvironmentVariables" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "_PrepareForRebuild" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Rebuild" en dépend) :
+     1>Génération de la cible "_PrepareForRebuild" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "BeforeRebuild" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Rebuild" en dépend) :
+     1>Génération de la cible "BeforeRebuild" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "_PrepareForClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Clean" en dépend) :
+       Utilisation de la tâche "Delete" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "Delete"
+         Suppression du fichier "Debug\ConsoleA.6C473FB1.tlog\ConsoleApplication1.lastbuildstate".
+       Exécution de la tâche "Delete" terminée.
+     1>Génération de la cible "_PrepareForClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "BeforeClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Clean" en dépend) :
+     1>Génération de la cible "BeforeClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "UnmanagedUnregistration" ignorée en raison d'une fausse condition ; ((('$(_AssemblyTimestampBeforeCompile)' != '$(_AssemblyTimestampAfterCompile)' or '$(RegisterForComInterop)' != 'true' or '$(OutputType)' != 'library') or
+                           ('$(_AssemblyTimestampBeforeCompile)' == '')) and
+                          Exists('@(_UnmanagedRegistrationCache)')) a été évaluée comme ((('' != '' or '' != 'true' or 'exe' != 'library') or
+                           ('' == '')) and
+                          Exists('obj\ConsoleApplication1.vcxproj.UnmanagedRegistration.cache')).
+     1>Cible "CoreClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Clean" en dépend) :
+       Tâche "Delete"
+         Le fichier "Debug\\TempCA\ConsoleApplication1.pdb" n'existe pas. Opération ignorée.
+         Le fichier "Debug\\TempCA\ConsoleApplication1.exe" n'existe pas. Opération ignorée.
+       Exécution de la tâche "Delete" terminée.
+       Utilisation de la tâche "ReadLinesFromFile" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "ReadLinesFromFile"
+       Exécution de la tâche "ReadLinesFromFile" terminée.
+       Utilisation de la tâche "FindUnderPath" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "FindUnderPath"
+         Le chemin de comparaison est "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\Debug\".
+       Exécution de la tâche "FindUnderPath" terminée.
+       Tâche "FindUnderPath"
+         Le chemin de comparaison est "Debug\".
+       Exécution de la tâche "FindUnderPath" terminée.
+       Tâche "Delete"
+       Exécution de la tâche "Delete" terminée.
+       Utilisation de la tâche "RemoveDuplicates" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "RemoveDuplicates"
+       Exécution de la tâche "RemoveDuplicates" terminée.
+       Utilisation de la tâche "MakeDir" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "MakeDir"
+       Exécution de la tâche "MakeDir" terminée.
+       Utilisation de la tâche "WriteLinesToFile" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "WriteLinesToFile"
+       Exécution de la tâche "WriteLinesToFile" terminée.
+     1>Génération de la cible "CoreClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "AssignProjectConfiguration" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "PrepareProjectReferences" en dépend) :
+       Utilisation de la tâche "AssignProjectConfiguration" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "AssignProjectConfiguration"
+       Exécution de la tâche "AssignProjectConfiguration" terminée.
+     1>Génération de la cible "AssignProjectConfiguration" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "_SplitProjectReferencesByFileExistence" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "PrepareProjectReferences" en dépend) :
+       Tâche "ResolveNonMSBuildProjectOutput" ignorée en raison d'une fausse condition ; ('$(BuildingInsideVisualStudio)'=='true' and '@(ProjectReferenceWithConfiguration)'!='') a été évaluée comme ('true'=='true' and ''!='').
+     1>Génération de la cible "_SplitProjectReferencesByFileExistence" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "_GetProjectReferenceTargetFrameworkProperties" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "PrepareProjectReferences" en dépend) :
+       Utilisation de la tâche "MSBuild" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "MSBuild"
+       Exécution de la tâche "MSBuild" terminée.
+       Tâche "GetReferenceNearestTargetFrameworkTask" ignorée en raison d'une fausse condition ; ('@(_ProjectReferenceTargetFrameworkPossibilities->Count())' != '0' and '$(ReferringTargetFrameworkForProjectReferences)' != '') a été évaluée comme ('0' != '0' and '.NETFramework,Version=v4.0' != '').
+     1>Génération de la cible "_GetProjectReferenceTargetFrameworkProperties" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "PrepareProjectReferences" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "CleanReferencedProjects" en dépend) :
+     1>Génération de la cible "PrepareProjectReferences" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "CleanReferencedProjects" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Clean" en dépend) :
+       Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('true' != 'true' and 'true' == 'true' and '' != '').
+     1>Génération de la cible "CleanReferencedProjects" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "CleanPublishFolder" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Clean" en dépend) :
+       Tâche "RemoveDir" ignorée en raison d'une fausse condition ; ('$(PublishDir)'=='$(OutputPath)app.publish\' and Exists('$(PublishDir)')) a été évaluée comme ('C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\Debug\app.publish\'=='C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\Debug\app.publish\' and Exists('C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\Debug\app.publish\')).
+     1>Génération de la cible "CleanPublishFolder" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "AfterClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Clean" en dépend) :
+     1>Génération de la cible "AfterClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "EntityClean" ignorée en raison d'une fausse condition ; ('@(EntityDeploy)' != '') a été évaluée comme ('' != '').
+     1>Cible "BeforeCppClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "CppClean" en dépend) :
+     1>Génération de la cible "BeforeCppClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "CoreCppClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "CppClean" en dépend) :
+       Tâche "MakeDir"
+       Exécution de la tâche "MakeDir" terminée.
+       Utilisation de la tâche "CppClean" à partir de l'assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
+       Tâche "CppClean"
+     1>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets(76,5): warning : Le processus ne peut pas accéder au fichier 'c:\users\alexis74\desktop\prog\code\c++\secuweb\swralgochiffrement\code alexis\consoleapplication1\consoleapplication1\debug\consoleapplication1.pch', car il est en cours d'utilisation par un autre processus.
+       Exécution de la tâche "CppClean" terminée.
+       Tâche "WriteLinesToFile"
+       Exécution de la tâche "WriteLinesToFile" terminée.
+     1>Génération de la cible "CoreCppClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "AfterCppClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "CppClean" en dépend) :
+     1>Génération de la cible "AfterCppClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "PGInstrumentedClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "CppClean" en dépend) :
+       Tâche "Delete"
+       Exécution de la tâche "Delete" terminée.
+     1>Génération de la cible "PGInstrumentedClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "CppClean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Clean" en dépend) :
+     1>Génération de la cible "CppClean" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "Clean" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Rebuild" en dépend) :
+     1>Génération de la cible "Clean" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "SetTelemetryEnvironmentVariables" ignorée. Elle a été générée.
+     1>Cible "_PrepareForBuild" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Build" en dépend) :
+       Tâche "CreateItem" ignorée en raison d'une fausse condition ; ('%(CustomBuild.IncludeFileToTool)'!='') a été évaluée comme (''!='').
+     1>Génération de la cible "_PrepareForBuild" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "_PrepareForReferenceResolution" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveReferences" en dépend) :
+       Tâche "Message" ignorée en raison d'une fausse condition ; ('$(_REFERENCE_DEBUG)'=='true') a été évaluée comme (''=='true').
+     1>Génération de la cible "_PrepareForReferenceResolution" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "ComputeCrtSDKReference" ignorée en raison d'une fausse condition ; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') a été évaluée comme ('ConsoleApplication1.cpp;pch.cpp'!='' and 'false'=='true' and '' != 'false').
+     1>Cible "BeforeResolveReferences" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveReferences" en dépend) :
+     1>Génération de la cible "BeforeResolveReferences" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "AssignProjectConfiguration" ignorée. Elle a été générée.
+       Cible "PrepareProjectReferences" ignorée. Elle a été générée.
+       Cible "_RemoveNameMetadataFromProjectReferenceItems" ignorée en raison d'une fausse condition ; ('@(ProjectReference)'!='') a été évaluée comme (''!='').
+     1>Cible "ResolveProjectReferences" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveReferences" en dépend) :
+       Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' != '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' != '10.0' and '' != '').
+       Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and ('$(BuildingInsideVisualStudio)' == 'true' or '$(BuildProjectReferences)' != 'true') and '$(VisualStudioVersion)' == '10.0' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('' == 'true' and '' != '' and ('true' == 'true' or 'true' != 'true') and '15.0' == '10.0' and '' != '').
+       Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingInsideVisualStudio)' != 'true' and '$(BuildProjectReferences)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('' == 'true' and '' != '' and 'true' != 'true' and 'true' == 'true' and '' != '').
+       Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '$(BuildingProject)' == 'true' and '@(_MSBuildProjectReferenceExistent)' != '') a été évaluée comme ('' == 'true' and '' != '' and 'true' == 'true' and '' != '').
+       Tâche "Warning" ignorée en raison d'une fausse condition ; ('@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceNonexistent)' != '') a été évaluée comme ('' != '' and '' != '').
+     1>Génération de la cible "ResolveProjectReferences" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "FindInvalidProjectReferences" ignorée en raison d'une fausse condition ; ('$(FindInvalidProjectReferences)' == 'true') a été évaluée comme ('' == 'true').
+       Cible "ResolveNativeReferences" ignorée en raison d'une fausse condition ; ('@(NativeReference)'!='') a été évaluée comme (''!='').
+       Cible "_PrepareForReferenceResolution" ignorée. Elle a été générée.
+       Cible "ResolveProjectReferences" ignorée. Elle a été générée.
+       Cible "FindInvalidProjectReferences" ignorée en raison d'une fausse condition ; ('$(FindInvalidProjectReferences)' == 'true') a été évaluée comme ('' == 'true').
+     1>Cible "GetFrameworkPaths" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.NETFramework.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+     1>Génération de la cible "GetFrameworkPaths" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "_PrepareForReferenceResolution" ignorée. Elle a été générée.
+       Cible "GetWinFXPath" ignorée en raison d'une fausse condition ; (('@(Page)' != '' or '@(ApplicationDefinition)' != '' or '@(Resource)' != '') and ('$(GetWinFXNativePath)' != '' or '$(GetWinFXWoWPath)' != '' )) a été évaluée comme (('' != '' or '' != '' or '' != '') and ('' != '' or '' != '' )).
+       Cible "GetFrameworkPaths" ignorée. Elle a été générée.
+     1>Cible "GetReferenceAssemblyPaths" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+       Tâche "GetReferenceAssemblyPaths" ignorée en raison d'une fausse condition ; ('$(TargetFrameworkMoniker)' != '' and ('$(_TargetFrameworkDirectories)' == '' or '$(_FullFrameworkReferenceAssemblyPaths)' == '')) a été évaluée comme ('' != '' and ('C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '' or 'C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.0' == '')).
+     1>Génération de la cible "GetReferenceAssemblyPaths" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "SetBuildDefaultEnvironmentVariables" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Current.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "PrepareForBuild" en dépend) :
+       Tâche "SetEnv"
+         PATH=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\bin\HostX86\x86;C:\Program Files (x86)\Windows Kits\10\bin\10.0.17134.0\x86;;C:\Program Files (x86)\Microsoft SDKs\Windows\v10.0A\bin\NETFX 4.6.1 Tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\tools;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\ide;C:\Program Files (x86)\HTML Help Workshop;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin;C:\WINDOWS\Microsoft.NET\Framework\v4.0.30319\;C:\WINDOWS\SysWow64;;C:\Program Files\Microsoft MPI\Bin\;D:\app\client\Alexis74\product\12.2.0\client_1;D:\app\client\Alexis74\product\12.2.0\client_1\bin;D:\app\Alexis74\product\11.2.0\dbhome_3\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\Program Files (x86)\CodeBlocks\bin;C:\Program Files (x86)\Skype\Phone\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\php;C:\Program Files\Git\cmd;C:\composer;C:\Program Files\dotnet\;C:\Program Files (x86)\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files\Microsoft SQL Server\140\Tools\Binn\;C:\Program Files (x86)\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\140\DTS\Binn\;C:\Program Files\Microsoft SQL Server\Client SDK\ODBC\130\Tools\Binn\;C:\Program Files (x86)\CodeBlocks\lib;C:\Users\Alexis74\AppData\Local\Microsoft\WindowsApps;C:\Users\Alexis74\AppData\Roaming\Composer\vendor\bin;C:\MinGW\bin;
+       Exécution de la tâche "SetEnv" terminée.
+       Tâche "SetEnv"
+         LIB=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\lib\x86;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\atlmfc\lib\x86;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\VS\lib\x86;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.17134.0\ucrt\x86;;;C:\Program Files (x86)\Windows Kits\10\lib\10.0.17134.0\um\x86;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\lib\um\x86;;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Lib\um\x86
+       Exécution de la tâche "SetEnv" terminée.
+       Tâche "SetEnv"
+         LIBPATH=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\atlmfc\lib\x86;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\lib\x86;
+       Exécution de la tâche "SetEnv" terminée.
+       Tâche "SetEnv"
+         INCLUDE=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\include;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\atlmfc\include;;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Auxiliary\VS\include;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\ucrt;;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;
+       Exécution de la tâche "SetEnv" terminée.
+     1>Génération de la cible "SetBuildDefaultEnvironmentVariables" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "SetUserMacroEnvironmentVariables" ignorée en raison d'une fausse condition ; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') a été évaluée comme ('' != '' and '' != 'true').
+       Cible "_PrepareForReferenceResolution" ignorée. Elle a été générée.
+     1>Cible "GetResolvedWinMD" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "PrepareForBuild" en dépend) :
+     1>Génération de la cible "GetResolvedWinMD" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "PlatformPrepareForBuild" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.Platform.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "PrepareForBuild" en dépend) :
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(_Error64bitToolsNotInstalled)' == 'true') a été évaluée comme ('' == 'true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == '') a été évaluée comme (''!='true' and 'true' != 'true' and 'v141' == '').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v110') a été évaluée comme (''!='true' and 'true' != 'true' and 'v141' == 'v110').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v100') a été évaluée comme (''!='true' and 'true' != 'true' and 'v141' == 'v100').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' == 'v90') a été évaluée comme (''!='true' and 'true' != 'true' and 'v141' == 'v90').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(_ToolsetFound)' != 'true' and '$(PlatformToolset)' != 'v90' and '$(PlatformToolset)' != 'v100' and '$(PlatformToolset)' != 'v110') a été évaluée comme (''!='true' and 'true' != 'true' and 'v141' != 'v90' and 'v141' != 'v100' and 'v141' != 'v110').
+     1>Génération de la cible "PlatformPrepareForBuild" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "_CheckWindowsSDKInstalled" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Cpp.WindowsSDK.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "PrepareForBuild" en dépend) :
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(WindowsSDKInstalled)' != 'true') a été évaluée comme ('true' != 'true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(PlatformShortName)' == 'ARM' and '$(WindowsAppContainer)' != 'true' and '$(WindowsSDKDesktopARMSupport)' != 'true') a été évaluée comme ('x86' == 'ARM' and 'false' != 'true' and '' != 'true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(PlatformShortName)' == 'ARM64' and '$(WindowsAppContainer)' != 'true' and '$(WindowsSDKDesktopARM64Support)' != 'true') a été évaluée comme ('x86' == 'ARM64' and 'false' != 'true' and '' != 'true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(WindowsAppContainer)' != 'true' and '$(WindowsSDK_Desktop_Support)' != true) a été évaluée comme ('false' != 'true' and 'true' != true).
+     1>Génération de la cible "_CheckWindowsSDKInstalled" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "GetFrameworkPaths" ignorée. Elle a été générée.
+       Cible "GetReferenceAssemblyPaths" ignorée. Elle a été générée.
+       Cible "AssignLinkMetadata" ignorée en raison d'une fausse condition ; ( '$(SynthesizeLinkMetadata)' == 'true' ) a été évaluée comme ( '' == 'true' ).
+     1>Cible "SetCABuildNativeEnvironmentVariables" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\VisualStudio\v15.0\CodeAnalysis\Microsoft.CodeAnalysis.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "PrepareForBuild" en dépend) :
+       Tâche "SetEnv"
+         CAExcludePath=C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\atlmfc\include;C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\include;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\ucrt;;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\um;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\shared;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\winrt;C:\Program Files (x86)\Windows Kits\10\Include\10.0.17134.0\cppwinrt;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\Include\um;
+       Exécution de la tâche "SetEnv" terminée.
+     1>Génération de la cible "SetCABuildNativeEnvironmentVariables" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "PrepareForBuild" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)' != 'true' and '$(ConfigurationPlatformExists)' != 'true') a été évaluée comme ('' != 'true' and 'true' != 'true').
+       Tâche "MakeDir"
+       Exécution de la tâche "MakeDir" terminée.
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(WindowsAppContainer)'=='true' and '$(ConfigurationType)'!='Application' and '$(ConfigurationType)'!='DynamicLibrary' and '$(ConfigurationType)'!='StaticLibrary') a été évaluée comme (''!='true' and 'false'=='true' and 'Application'!='Application' and 'Application'!='DynamicLibrary' and 'Application'!='StaticLibrary').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(VCToolsInstallDir)'=='' and '$(UseEnv)' != 'true' and ('$(TargetFrameworkVersion)'=='v3.5' or '$(TargetFrameworkVersion)'=='v3.0' or '$(TargetFrameworkVersion)'=='v2.0' )) a été évaluée comme (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\'=='' and '' != 'true' and ('v4.0'=='v3.5' or 'v4.0'=='v3.0' or 'v4.0'=='v2.0' )).
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(VCToolsInstallDir)'=='' and '$(UseEnv)' != 'true' and '$(PlatformToolset)'=='v90') a été évaluée comme (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\'=='' and '' != 'true' and 'v141'=='v90').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(VCToolsInstallDir)'=='' and '$(UseEnv)' != 'true') a été évaluée comme (''!='true' and 'C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\'=='' and '' != 'true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(WindowsSDKDir)'=='' and '$(UseEnv)' != 'true') a été évaluée comme (''!='true' and 'C:\Program Files (x86)\Windows Kits\10\'=='' and '' != 'true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(IntDirTrailingSlashWarning)'=='true') a été évaluée comme (''!='true' and ''=='true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(OutDirTrailingSlashWarning)'=='true') a été évaluée comme (''!='true' and ''=='true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('%(CompatibilityIssues.Identity)' != '' and '$(DesignTimeBuild)'!='true') a été évaluée comme ('' != '' and ''!='true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(IgnoreWarnIntDirSharingDetected)' != 'true' and '$(IntDirSharingDetected)' == 'true') a été évaluée comme ('' != 'true' and '' == 'true').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)'!='true' and '$(IgnoreWarnIntDirInTempDetected)' != 'true' and ('$(_IntDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_IntDirFullpath.StartsWith($(Temp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Tmp), true, null))' == 'true' or '$(_OutDirFullpath.StartsWith($(Temp), true, null))' == 'true')) a été évaluée comme (''!='true' and '' != 'true' and ('False' == 'true' or 'False' == 'true' or 'False' == 'true' or 'False' == 'true')).
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('$(DesignTimeBuild)' != 'true' and '$(SpectreMitigation)' != '' and '$(SpectreMitigation)' != 'false' and (('$(_VC_Target_Library_Platform)' == 'OneCore' and !Exists('$(VC_LibraryPath_VC_x86_OneCore)')) or ('$(_VC_Target_Library_Platform)' == 'Desktop' and !Exists('$(VC_LibraryPath_VC_x86_Desktop)')))) a été évaluée comme ('' != 'true' and 'false' != '' and 'false' != 'false' and (('Desktop' == 'OneCore' and !Exists('C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\lib\onecore\x86')) or ('Desktop' == 'Desktop' and !Exists('C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\VC\Tools\MSVC\14.15.26726\lib\x86')))).
+       Tâche "MakeDir"
+       Exécution de la tâche "MakeDir" terminée.
+     1>Génération de la cible "PrepareForBuild" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "_PrepareForReferenceResolution" ignorée. Elle a été générée.
+       Cible "ComputeCrtSDKReference" ignorée en raison d'une fausse condition ; ('@(ClCompile)'!='' and '$(WindowsAppContainer)'=='true' and '$(UseCrtSDKReference)' != 'false') a été évaluée comme ('ConsoleApplication1.cpp;pch.cpp'!='' and 'false'=='true' and '' != 'false').
+       Cible "GetInstalledSDKLocations" ignorée en raison d'une fausse condition ; ('@(SDKReference)' != '') a été évaluée comme ('' != '').
+     1>Cible "ResolveSDKReferences" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+       Tâche "ResolveSDKReference" ignorée en raison d'une fausse condition ; ('@(SDKReference)'!='') a été évaluée comme (''!='').
+     1>Génération de la cible "ResolveSDKReferences" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "ResolveSDKReferences" ignorée. Elle a été générée.
+     1>Cible "ExpandSDKReferences" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+       Tâche "GetSDKReferenceFiles" ignorée en raison d'une fausse condition ; ('@(ResolvedSDKReference)'!='') a été évaluée comme (''!='').
+     1>Génération de la cible "ExpandSDKReferences" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "ResolveNuGetPackageAssets" ignorée en raison d'une fausse condition ; ('$(ResolveNuGetPackages)' == 'true' and exists('$(ProjectLockFile)')) a été évaluée comme ('true' == 'true' and exists('obj\project.assets.json')).
+       Cible "FakesGenerateBeforeBuild" ignorée en raison d'une fausse condition ; (@(Fakes) != '' AND $(BuildingProject)) a été évaluée comme ( != '' AND true).
+       Cible "ImplicitlyExpandNETStandardFacades" ignorée en raison d'une fausse condition ; ('$(ImplicitlyExpandNETStandardFacades)' == 'true') a été évaluée comme ('' == 'true').
+       Cible "GetReferenceAssemblyPaths" ignorée. Elle a été générée.
+       Cible "ImplicitlyExpandNETStandardFacades" ignorée en raison d'une fausse condition ; ('$(ImplicitlyExpandNETStandardFacades)' == 'true') a été évaluée comme ('' == 'true').
+     1>Cible "_HandlePackageFileConflicts" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\Microsoft.NET.Build.Extensions.ConflictResolution.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveAssemblyReferences" en dépend) :
+       Utilisation de la tâche "ResolvePackageFileConflicts" à partir de l'assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\Microsoft\Microsoft.NET.Build.Extensions\\tools\net46\Microsoft.NET.Build.Extensions.Tasks.dll".
+       Tâche "ResolvePackageFileConflicts"
+       Exécution de la tâche "ResolvePackageFileConflicts" terminée.
+     1>Génération de la cible "_HandlePackageFileConflicts" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "ResolveAssemblyReferences" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveReferences" en dépend) :
+       Tâche "ResolveAssemblyReference" ignorée en raison d'une fausse condition ; ('@(Reference)'!='' or '@(_ResolvedProjectReferencePaths)'!='' or '@(_ExplicitReference)' != '') a été évaluée comme (''!='' or ''!='' or '' != '').
+     1>Génération de la cible "ResolveAssemblyReferences" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "GenerateBindingRedirects" ignorée en raison d'une fausse condition ; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true') a été évaluée comme ('' == 'true' and 'true' == 'true').
+       Cible "_RemoveZipFileSuggestedRedirect" ignorée en raison d'une fausse condition ; ('$(_TargetFrameworkVersionWithoutV)' >= '4.7.1' And '$(AllowZipFileRedirect)' != 'true') a été évaluée comme ('4.0' >= '4.7.1' And '' != 'true').
+       Cible "GenerateBindingRedirectsUpdateAppConfig" ignorée en raison d'une fausse condition ; ('$(AutoGenerateBindingRedirects)' == 'true' and '$(GenerateBindingRedirectsOutputType)' == 'true' and Exists('$(_GenerateBindingRedirectsIntermediateAppConfig)')) a été évaluée comme ('' == 'true' and 'true' == 'true' and Exists('Debug\ConsoleApplication1.exe.config')).
+       Cible "ResolveComReferences" ignorée en raison d'une fausse condition ; ('@(COMReference)'!='' or '@(COMFileReference)'!='') a été évaluée comme (''!='' or ''!='').
+     1>Cible "AfterResolveReferences" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ResolveReferences" en dépend) :
+     1>Génération de la cible "AfterResolveReferences" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "ImplicitlyExpandDesignTimeFacades" ignorée en raison d'une fausse condition ; ('$(ImplicitlyExpandDesignTimeFacades)' == 'true') a été évaluée comme ('' == 'true').
+       Cible "ResolveTestReferences" ignorée en raison d'une fausse condition ; ('@(Shadow)'!='') a été évaluée comme (''!='').
+     1>Cible "ResolveReferences" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Build" en dépend) :
+     1>Génération de la cible "ResolveReferences" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "PrepareForBuild" ignorée. Elle a été générée.
+       Cible "PrepareForBuild" ignorée. Elle a été générée.
+     1>Cible "InitializeBuildStatus" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Build" en dépend) :
+       Tâche "ReadLinesFromFile"
+       Exécution de la tâche "ReadLinesFromFile" terminée.
+       Tâche "WriteLinesToFile"
+       Exécution de la tâche "WriteLinesToFile" terminée.
+       Utilisation de la tâche "Touch" à partir de l'assembly "Microsoft.Build.Tasks.Core, Version=15.1.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a".
+       Tâche "Touch"
+         Création de "Debug\ConsoleA.6C473FB1.tlog\unsuccessfulbuild", car "AlwaysCreate" a été spécifié.
+       Exécution de la tâche "Touch" terminée.
+     1>Génération de la cible "InitializeBuildStatus" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "PrepareProjectReferences" ignorée. Elle a été générée.
+     1>Cible "BuildGenerateSourcesTraverse" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "BuildGenerateSources" en dépend) :
+       Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != '' and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') a été évaluée comme ('' == 'true' and '' != '' and '' != '' and '' == 'true').
+     1>Génération de la cible "BuildGenerateSourcesTraverse" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "PrepareForBuild" ignorée. Elle a été générée.
+       Cible "ResolveReferences" ignorée. Elle a été générée.
+     1>Cible "BeforeBuildGenerateSources" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+     1>Génération de la cible "BeforeBuildGenerateSources" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "PreBuildEvent" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+       Tâche "Message" ignorée en raison d'une fausse condition ; ('%(PreBuildEvent.Message)' != '' and '%(PreBuildEvent.Command)' != '') a été évaluée comme ('' != '' and '' != '').
+       Tâche "Exec" ignorée en raison d'une fausse condition ; ('%(PreBuildEvent.Command)' != '') a été évaluée comme ('' != '').
+     1>Génération de la cible "PreBuildEvent" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "CustomBuild" ignorée en raison d'une fausse condition ; ('@(CustomBuild)' != '') a été évaluée comme ('' != '').
+       Cible "FxExport" ignorée en raison d'une fausse condition ; ('@(FxCompile)' != '') a été évaluée comme ('' != '').
+       Cible "FxCompile" ignorée en raison d'une fausse condition ; ('@(FxCompile)' != '') a été évaluée comme ('' != '').
+       Cible "_CreateCopyFileItems" ignorée en raison d'une fausse condition ; ('@(CopyFileToFolders)' != '') a été évaluée comme ('' != '').
+       Cible "PrepareForBuild" ignorée. Elle a été générée.
+       Cible "InitializeBuildStatus" ignorée. Elle a été générée.
+       Cible "SetBuildDefaultEnvironmentVariables" ignorée. Elle a été générée.
+       Cible "SetUserMacroEnvironmentVariables" ignorée en raison d'une fausse condition ; ('@(BuildMacro)' != '' and '$(DesignTimeBuild)' != 'true') a été évaluée comme ('' != '' and '' != 'true').
+     1>Cible "_SelectedFiles" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "CopyFileToFolders" en dépend) :
+     1>Génération de la cible "_SelectedFiles" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "CopyFileToFolders" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+       Utilisation de la tâche "GetOutOfDateItems" à partir de l'assembly "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.Build.CppTasks.Common.dll".
+       Tâche "GetOutOfDateItems"
+       Exécution de la tâche "GetOutOfDateItems" terminée.
+       Tâche "Copy" ignorée en raison d'une fausse condition ; ('@(_OutOfDateCopyFile)' != '') a été évaluée comme ('' != '').
+     1>Génération de la cible "CopyFileToFolders" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "Xsd" ignorée en raison d'une fausse condition ; ('@(Xsd)' != '') a été évaluée comme ('' != '').
+     1>Cible "_Xsd" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+     1>Génération de la cible "_Xsd" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "MakeDirsForMidl" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_Midl" en dépend) :
+       Tâche "Makedir"
+       Exécution de la tâche "Makedir" terminée.
+     1>Génération de la cible "MakeDirsForMidl" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "Midl" ignorée en raison d'une fausse condition ; ('@(Midl)' != '') a été évaluée comme ('' != '').
+       Cible "CustomBuild" ignorée en raison d'une fausse condition ; ('@(CustomBuild)' != '') a été évaluée comme ('' != '').
+       Cible "FxExport" ignorée en raison d'une fausse condition ; ('@(FxCompile)' != '') a été évaluée comme ('' != '').
+       Cible "FxCompile" ignorée en raison d'une fausse condition ; ('@(FxCompile)' != '') a été évaluée comme ('' != '').
+     1>Cible "ComputeMIDLGeneratedCompileInputs" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_Midl" en dépend) :
+     1>Génération de la cible "ComputeMIDLGeneratedCompileInputs" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "AfterMidl" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_Midl" en dépend) :
+     1>Génération de la cible "AfterMidl" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "_Midl" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+     1>Génération de la cible "_Midl" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "AfterBuildGenerateSources" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.BuildSteps.Targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+     1>Génération de la cible "AfterBuildGenerateSources" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "AfterBuildGenerateSourcesEvent" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_BuildGenerateSourcesAction" en dépend) :
+     1>Génération de la cible "AfterBuildGenerateSourcesEvent" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "_BuildGenerateSourcesAction" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "BuildGenerateSources" en dépend) :
+     1>Génération de la cible "_BuildGenerateSourcesAction" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "BuildGenerateSources" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "Build" en dépend) :
+     1>Génération de la cible "BuildGenerateSources" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "PrepareProjectReferences" ignorée. Elle a été générée.
+     1>Cible "BuildCompileTraverse" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\MSBuild\15.0\Bin\Microsoft.Common.CurrentVersion.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "BuildCompile" en dépend) :
+       Tâche "MSBuild" ignorée en raison d'une fausse condition ; ('$(BuildPassReferences)' == 'true' and '@(ProjectReferenceWithConfiguration)' != '' and '@(_MSBuildProjectReferenceExistent)' != ''  and '%(_MSBuildProjectReferenceExistent.BuildReference)' == 'true') a été évaluée comme ('' == 'true' and '' != '' and '' != ''  and '' == 'true').
+     1>Génération de la cible "BuildCompileTraverse" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "PrepareForBuild" ignorée. Elle a été générée.
+       Cible "ResolveReferences" ignorée. Elle a été générée.
+     1>Cible "BeforeClCompile" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_ClCompile" en dépend) :
+     1>Génération de la cible "BeforeClCompile" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "ComputeMIDLGeneratedCompileInputs" ignorée. Elle a été générée.
+     1>Cible "ComputeCLInputPDBName" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_ClCompile" en dépend) :
+     1>Génération de la cible "ComputeCLInputPDBName" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "ResolveReferences" ignorée. Elle a été générée.
+     1>Cible "ComputeReferenceCLInput" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_ClCompile" en dépend) :
+       Tâche "WriteLinesToFile" ignorée en raison d'une fausse condition ; (('@(_ReferenceCopyLocalPaths)'!='') and '$(DesignTimeBuild)' != 'true') a été évaluée comme ((''!='') and '' != 'true').
+       Tâche "Message" ignorée en raison d'une fausse condition ; ('$(_REFERENCE_DEBUG)'=='true') a été évaluée comme (''=='true').
+     1>Génération de la cible "ComputeReferenceCLInput" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "WarnCompileDuplicatedFilename" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_ClCompile" en dépend) :
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') a été évaluée comme ('' != 'true' and 'ConsoleApplication1.cpp' != 'ConsoleApplication1.cpp' and 'Debug\' == 'Debug\').
+       Tâche "VCMessage" ignorée en raison d'une fausse condition ; ('%(ClCompile.ExcludedFromBuild)' != 'true' and '%(Filename)%(Extension)' != '@(ClCompile->'%(Filename)%(Extension)')' and '%(ObjectFileName)' == '@(ClCompile->Metadata(ObjectFileName)->Distinct())') a été évaluée comme ('' != 'true' and 'pch.cpp' != 'pch.cpp' and 'Debug\' == 'Debug\').
+     1>Génération de la cible "WarnCompileDuplicatedFilename" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "FixupCLCompileOptions" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_ClCompile" en dépend) :
+     1>Génération de la cible "FixupCLCompileOptions" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "MakeDirsForCl" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_ClCompile" en dépend) :
+       Tâche "MakeDir"
+       Exécution de la tâche "MakeDir" terminée.
+     1>Génération de la cible "MakeDirsForCl" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "_SelectedFiles" ignorée. Elle a été générée.
+       Cible "ComputeMIDLGeneratedCompileInputs" ignorée. Elle a été générée.
+       Cible "ComputeCLInputPDBName" ignorée. Elle a été générée.
+       Cible "ComputeReferenceCLInput" ignorée. Elle a été générée.
+       Cible "WarnCompileDuplicatedFilename" ignorée. Elle a été générée.
+       Cible "FixupCLCompileOptions" ignorée. Elle a été générée.
+       Cible "_SelectedFiles" ignorée. Elle a été générée.
+     1>Cible "SelectCustomBuild" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "SelectClCompile" en dépend) :
+     1>Génération de la cible "SelectCustomBuild" terminée dans le projet "ConsoleApplication1.vcxproj".
+     1>Cible "SelectClCompile" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppBuild.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "ClCompile" en dépend) :
+     1>Génération de la cible "SelectClCompile" terminée dans le projet "ConsoleApplication1.vcxproj".
+       Cible "GenerateTargetFrameworkMonikerAttribute" ignorée en raison d'une fausse condition ; ('$(GenerateTargetFrameworkAttribute)' == 'true') a été évaluée comme ('false' == 'true').
+       Cible "ManagedIncrementalBuildPreProcessDependencyGraph" ignorée en raison d'une fausse condition ; ('@(ClCompile)' != '' and '$(EnableManagedIncrementalBuild)' == 'True') a été évaluée comme ('ConsoleApplication1.cpp;pch.cpp' != '' and 'false' == 'True').
+     1>Cible "ClCompile" dans le fichier "C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets" du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (la cible "_ClCompile" en dépend) :
+       Tâche "Delete"
+         Suppression du fichier "Debug\ConsoleApplication1.pch".
+     1>C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(310,5): error MSB3061: Impossible de supprimer le fichier "Debug\ConsoleApplication1.pch". Le processus ne peut pas accéder au fichier 'C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\Debug\ConsoleApplication1.pch', car il est en cours d'utilisation par un autre processus.
+       Exécution de la tâche "Delete" terminée -- ÉCHEC.
+     1>Génération de la cible "ClCompile" terminée dans le projet "ConsoleApplication1.vcxproj" -- ÉCHEC.
+     1>Génération du projet "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" terminée (Rebuild cible(s)) -- ÉCHEC.
+
+ÉCHEC de la build.
+
+       "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (Rebuild cible) (1) ->
+       (CoreCppClean cible) -> 
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppClean.targets(76,5): warning : Le processus ne peut pas accéder au fichier 'c:\users\alexis74\desktop\prog\code\c++\secuweb\swralgochiffrement\code alexis\consoleapplication1\consoleapplication1\debug\consoleapplication1.pch', car il est en cours d'utilisation par un autre processus.
+
+
+       "C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\ConsoleApplication1.vcxproj" (Rebuild cible) (1) ->
+       (ClCompile cible) -> 
+         C:\Program Files (x86)\Microsoft Visual Studio\2017\Enterprise\Common7\IDE\VC\VCTargets\Microsoft.CppCommon.targets(310,5): error MSB3061: Impossible de supprimer le fichier "Debug\ConsoleApplication1.pch". Le processus ne peut pas accéder au fichier 'C:\Users\Alexis74\Desktop\PROG\Code\C++\SecuWeb\SWRAlgoChiffrement\code Alexis\ConsoleApplication1\ConsoleApplication1\Debug\ConsoleApplication1.pch', car il est en cours d'utilisation par un autre processus.
+
+    1 Avertissement(s)
+    1 Erreur(s)
+
+Temps écoulé 00:00:00.10

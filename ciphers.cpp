@@ -1,4 +1,4 @@
-#include "h.hpp"
+#include "header.hpp"
 
 using namespace std;
 
@@ -211,7 +211,6 @@ void Cipher( vector<string> &blocs, vector<string> &key){
 	}
 */
 	cout << endl << "This message by bytes:" << endl << endl << setbase(64);
-
 }
 
 void cipher(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key){
@@ -225,7 +224,6 @@ void cipher(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key){
 			cg.at(i).at(n) = grid.at(i).at(n) ^ key.at(i).at(n);
 		
 	grid = cg;
-	
 }
 
 void extend_key_set(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key){
@@ -283,7 +281,6 @@ vector<vector<int>> generate_landing_points(vector<vector<bitset<8>>> &grid, int
 		row.clear();
 	}
 	return landing_points;
-
 }
 
 
@@ -353,7 +350,6 @@ void row_sign(vector<bitset<8>> &set){
 	cset[3][0] = set[3][0];
 
 	set = cset;
-
 }
 
 void mix_columns(vector<vector<bitset<8>>> &grid){
@@ -361,7 +357,6 @@ void mix_columns(vector<vector<bitset<8>>> &grid){
 	for (int i=0; i < grid.size(); i++){
 		row_sign(grid.at(i));
 	}
-
 }
 
 
@@ -404,7 +399,6 @@ vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor){
 	//out_2dint(landing_points);
 
 	return landing_points;
-
 }
 
 void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
@@ -424,7 +418,6 @@ void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
 	}
 
 	grid = n_val;
-
 /* WORKING - Removed for the coding of a new version
 	vector<bitset<8>> new_row;
 
@@ -469,7 +462,6 @@ void vstr_to_bitgrid(vector<string> &msg, vector<vector<bitset<8>>> &grid){
 		
 	}
 	grid = cg;
-
 }
 
 string grid_to_str( vector<vector<bitset<8>>> &grid){

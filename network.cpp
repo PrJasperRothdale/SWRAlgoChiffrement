@@ -57,7 +57,7 @@ bool ListenTo(SOCKET& clientSocket, const std::string& port)
 	}
 
 	// Setup the TCP listening socket
-	iResult = bind(listenSocket, result->ai_addr, (int)result->ai_addrlen);
+	iResult = ::bind(listenSocket, result->ai_addr, (int)result->ai_addrlen);
 	if (iResult == SOCKET_ERROR) {
 		printf("Server : bind failed with error: %d\n", WSAGetLastError());
 		freeaddrinfo(result);
@@ -197,41 +197,3 @@ int receiveFrom(SOCKET& socket, std::string& outMessage)
 
 	return iResult;
 }
-
-
-//se connecte puis boucle tant que le message n'est pas envoyé
-void envoieA(std::string adresse, std::string port, std::string& message)
-{
-	std::string status;
-	do {
-		SOCKET socket = INVALID_SOCKET;
-
-		if (connectTo(socket, adresse, port))
-		{
-			if (sendTo(socket, message))
-				status = "Envoyé";
-			else
-				status = "Erreur";
-		}
-	} while (status == "Erreur");
-
-}
-
-std::string recevoir(std::string port)//boucle tant que l'on ne recoit rien
-{
-	SOCKET listenSocket = INVALID_SOCKET;
-
-
-	std::string message = "";
-	do {
-			do
-			{
-			} while (receiveFrom(listenSocket, message) > 0);
-
-			
-	}while (ListenTo(listenSocket, port));
-
-	closeSocket(listenSocket);
-	return message;
-}
-//----------------------------------------
