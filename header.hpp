@@ -58,12 +58,14 @@ bool closeSocket(SOCKET& socket);
 
 bool sendTo(SOCKET& socket, const std::string& inMessage);
 int receiveFrom(SOCKET& socket, std::string& outMessage);
+
+string handshake(string message, string portDest, string addrDest, string portSend);
+string rhas(string port);
 ///////////////////////////////////
 
 
 ///////////////////////////////////Fonctions chiffrement
 string Encrypt(string &msg,string &key);
-
 void Cipher(vector<string> &blocs, vector<string> &key);
 vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor);
 bitset<8> gamul(bitset<8> a, bitset<8> b);
