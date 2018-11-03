@@ -3,6 +3,7 @@
 #include <ws2tcpip.h>
 #include <stdio.h>
 #include <time.h>
+#include <math.h>
 #include <Windows.h>
 
 //C++11 Libraries
@@ -59,14 +60,15 @@ bool closeSocket(SOCKET& socket);
 bool sendTo(SOCKET& socket, const std::string& inMessage);
 int receiveFrom(SOCKET& socket, std::string& outMessage);
 
-string handshake(string message, string portDest, string addrDest, string portSend);
+void handshake(string message, string portDest, string addrDest, string portSend);
 string rhas(string port);
 ///////////////////////////////////
 
+vector<int> dhk_kg(string mes);
 
 ///////////////////////////////////Fonctions chiffrement
-string Encrypt(string &msg,string &key);
-void Cipher(vector<string> &blocs, vector<string> &key);
+string encrypt(string msg,string key);
+string decrypt( string msg, string key);
 vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor);
 bitset<8> gamul(bitset<8> a, bitset<8> b);
 void cipher(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key);
@@ -79,7 +81,7 @@ void out_grid(vector<vector<bitset<8>>> &grid);
 void mix_columns(vector<vector<bitset<8>>> &grid);
 void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor = 1);
 string grid_to_str( vector<vector<bitset<8>>> &grid);
-int Blockify( string& msg, vector<string>& blocs);
+void Blockify( string& msg, vector<string>& blocs);
 void printBytes(vector<string> v_s);
 ///////////////////////////////////
 
