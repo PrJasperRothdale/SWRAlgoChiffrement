@@ -20,11 +20,15 @@ string encrypt( string msg, string key)
 	extend_key_set(grid,grek);
 
 	//Etapes de chiffrement répétées 13 fois
+	cout << "\nAffichage de la grid avant nos etapes de chiffrement :\n";
+	out_grid(grid);
+	cout << "\n ----Début de notre chiffrement---- ";
 	for (int i=0; i < 13; i++){
-		
 		mix_columns(grid);
 		shift_rows(grid);
 		cipher(grid,grek);
+		cout << "\n\nAffichage de la grid à l'etape" << i << " de notre boucle:\n";
+		out_grid(grid);
 	}
 
 	//Renvoi du message en forme string
@@ -49,11 +53,16 @@ string decrypt(string msg, string key){
 	//Extension de la clé pour avoir la taille du message
 	extend_key_set(grid,grek);
 
+	cout << "\nAffichage de la grid avant nos etapes de dechiffrement :\n";
+	out_grid(grid);
+	cout << "\n ----Début de notre dechiffrement---- ";
 	//Dechiffrement réalisé 13 fois
 	for (int i=0; i < 13; i++){
 		cipher(grid, grek);
 		shift_rows(grid, -1);
 		mix_columns(grid);
+		cout << "\n\nAffichage de la grid à l'etape" << i << " de notre boucle:\n";
+		out_grid(grid);
 	}
 
 	//Retour sous forme de string

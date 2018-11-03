@@ -58,7 +58,7 @@ bool ListenTo(SOCKET& socket, const std::string& port);
 bool connectTo(SOCKET& socket, const std::string& address, const std::string& port);
 bool closeSocket(SOCKET& socket);
 
-//Fonction d'envoie et de réception d'un message vers un socket précis
+//Fonction d'envoi et de réception d'un message vers un socket précis
 bool sendTo(SOCKET& socket, const std::string& inMessage);
 int receiveFrom(SOCKET& socket, std::string& outMessage);
 
