@@ -21,8 +21,6 @@ int main(int argc, char *argv[])
 	thread thAgnes(Agnes);
 
 
-
-
 	thAgnes.join();
 	thBernard.join();
 	thClement.join();

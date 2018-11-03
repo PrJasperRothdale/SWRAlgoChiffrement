@@ -153,7 +153,7 @@ bitset<8> gamul(bitset<8> a, bitset<8> b) {
 */
 
 //Fonction qui étale l'information d'un octet sur toute sa colonne
-void row_sign(vector<bitset<8>> &set){
+void col_sign(vector<bitset<8>> &set){
 
 	vector<bitset<8>> cset;
 	cset = set;
@@ -198,24 +198,26 @@ void row_sign(vector<bitset<8>> &set){
 	set = cset;
 }
 
+//Fonction qui répartit l'information de chaque octet sur tout les octets
 void mix_columns(vector<vector<bitset<8>>> &grid){
-
 	for (int i=0; i < grid.size(); i++){
-		row_sign(grid.at(i));
+		col_sign(grid.at(i));
 	}
 }
 
-
+//Fonction qui génere des coordonnées pour la rotation des rangs
 vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor){
 
 	vector<vector<int>> landing_points;
 	vector<int> prow;
 	vector<int> row;
 
+	//Rang symbolique, qui contient tous les indexs
 	for (int i=0; i < grid.at(i).size(); i++){
 		prow.push_back(i);
 	}
 	
+	//Application de l'opération vers l'avant
 	if (sfactor > 0)
 	{
 		for (int d=0; d < grid.size(); d++){
@@ -225,7 +227,7 @@ vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor){
 			landing_points.push_back(row);
 			row.clear();
 		}
-	}
+	} // Si le facteur optionnel est négatif l'opération se fait vers l'arrière
 	else
 	{
 		for (int d=0; d < grid.size(); d++){
@@ -239,12 +241,11 @@ vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor){
 			row.clear();
 		}
 	}
-	//cout << endl << "Land points : " << endl;
-	//out_2dint(landing_points);
 
 	return landing_points;
 }
 
+//Fonction qui décale les octets dans le rang
 void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
 
 	vector<vector<bitset<8>>> n_val;
@@ -252,7 +253,7 @@ void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
 	n_val = grid;
 	vector<vector<int>> landing_points;
 
-
+	//Récupération des coordonnées de destination
 	landing_points = lb_colshift(grid, sfactor);
 
 	for (int i=0; i < n_val.size() ; i++){
@@ -262,7 +263,7 @@ void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
 	}
 
 	grid = n_val;
-/* WORKING - Removed for the coding of a new version
+/* Fonctionnel - Supprimé lors du changement du sens de rotation de l'algorithme
 	vector<bitset<8>> new_row;
 
 	vector<vector<int>> landing_points;
@@ -282,6 +283,7 @@ void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
 */
 }
 
+//Fonction qui transforme un tableau de strings en matrice d'octets
 void vstr_to_bitgrid(vector<string> &msg, vector<vector<bitset<8>>> &grid){
 
 	vector<vector<bitset<8>>> cg;
@@ -289,7 +291,7 @@ void vstr_to_bitgrid(vector<string> &msg, vector<vector<bitset<8>>> &grid){
 	bitset<8> bnull(0x00);
 
 	int d;
-
+	
 	for (int i=0; i < msg.size(); i++){
 		for (int n=0 ; n < msg.at(i).size(); n++){
 			bitset<8> blet(msg.at(i).c_str()[n]);
@@ -299,15 +301,18 @@ void vstr_to_bitgrid(vector<string> &msg, vector<vector<bitset<8>>> &grid){
 		row.clear();
 	}
 
+	//Remplissage du dernier rang avec octet null pour avoir un matrice rectangulaire
 	if ( cg.back().size() < cg.front().size()){
 		d = cg.front().size() - cg.back().size();
 		for (int x=0; x < d ; x++)
 			cg.back().push_back(bnull);
 		
 	}
+
 	grid = cg;
 }
 
+//Fonction d'interprétation de la matrice d'octet en string
 string grid_to_str( vector<vector<bitset<8>>> &grid){
 
 	stringstream ss;
@@ -319,6 +324,7 @@ string grid_to_str( vector<vector<bitset<8>>> &grid){
 	return ss.str();
 }
 
+//Fonction d'affichage des matrice d'octets
 void out_grid(vector<vector<bitset<8>>> &grid){
 
 	for (int i=0; i < grid.size() ; i++){
@@ -330,6 +336,7 @@ void out_grid(vector<vector<bitset<8>>> &grid){
 	}
 }
 
+//Fonction d'affichage de matrice d'entier (les landing points par exemple)
 void out_2dint(vector<vector<int>> &vec){
 
 	for (int i=0; i < vec.size() ; i++){
