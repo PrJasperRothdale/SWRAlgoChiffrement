@@ -19,61 +19,65 @@ string encrypt( string msg, string key)
 	//Extension de la clé par replication pour avoir la même taille que le message
 	extend_key_set(grid,grek);
 
-	// 2 - Chiffrer le message
+	//Etapes de chiffrement répétées 13 fois
 	for (int i=0; i < 13; i++){
 		
 		mix_columns(grid);
 		shift_rows(grid);
 		cipher(grid,grek);
 	}
-/*
-	cout << endl << "Message après chiffrement :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-*/
+
+	//Renvoi du message en forme string
 	return grid_to_str(grid);
 
 }
 
+//Fonction de déchiffrement
 string decrypt(string msg, string key){
-	cout << endl << "Message : " << msg << " Key : " << key << endl;
+
 	vector<string> mblocs;
 	vector<string> kblocs;
 	vector<vector<bitset<8>>> grid;
 	vector<vector<bitset<8>>> grek;
 
-	// 1 - Transformer le message en tableau de blocs
+	//Transformation en blocs puis en matrice d'octets
 	Blockify(msg, mblocs);
 	Blockify(key, kblocs);
-
 	vstr_to_bitgrid(mblocs, grid);
 	vstr_to_bitgrid(kblocs, grek);
 
+	//Extension de la clé pour avoir la taille du message
 	extend_key_set(grid,grek);
 
+	//Dechiffrement réalisé 13 fois
 	for (int i=0; i < 13; i++){
 		cipher(grid, grek);
 		shift_rows(grid, -1);
 		mix_columns(grid);
 	}
 
+	//Retour sous forme de string
 	return grid_to_str(grid);
 }
 
+//Fonction de Transformation d'une string en tableau de blocs
 void Blockify( string& msg, vector<string>& blocs){
 
-	const int _taille_bloc_ = 4;
+	//Nombre de blocs
+	const int taille = 4;
 
 	int len = msg.length();
-	int nbBlocs = len/_taille_bloc_;
-	if(len%_taille_bloc_ != 0)
+	int nbBlocs = len/taille;
+	if(len%taille != 0)
 		nbBlocs++;
 
+	//Decoupage
 	for(int i=0; i < nbBlocs; i++){
-		string cut = msg.substr(0,_taille_bloc_);
+		string cut = msg.substr(0,taille);
 		blocs.push_back(cut);
 
-		for(int i = 0; i < _taille_bloc_; i++)
+		//Suppression des parties traitées
+		for(int i = 0; i < taille; i++)
 			msg.erase(0,1);
 
 	}
@@ -81,11 +85,14 @@ void Blockify( string& msg, vector<string>& blocs){
 
 }
 
+//Fonction de chiffrement par la clé
 void cipher(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key){
 
+	//Copie du message
 	vector<vector<bitset<8>>> cg;
 	cg = grid;
 
+	//Application d'un ou exclusif entre la matrice clé et la matrice message
 	for (int i=0; i < grid.size(); i++){
 		for (int n=0; n < grid.at(i).size(); n++){
 			cg.at(i).at(n) = grid.at(i).at(n) ^ key.at(i).at(n);
@@ -95,14 +102,15 @@ void cipher(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key){
 	grid = cg;
 }
 
+//Fonstion d'extension de la cle
 void extend_key_set(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key){
+
 
 	vector<vector<bitset<8>>> ck;
 	int row = 0;
 	int column = 0;
-	int b = 0;
-	int c = 0;
 
+	//Initialisation par copie du message pour obtenir la taille de sortie désirée
 	ck = grid;
 
 	for (int i=0; i < grid.size(); i++){
@@ -111,48 +119,17 @@ void extend_key_set(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &
 			int ss = key.at(i%s).size();
 			int v = i%s;
 			int w = n%ss;
+			//Si la valeur en i,n est différente de la valeur de la clé (dimensions ajustées) on ecrase la valeur
 			if ( ck.at(i).at(n) != key.at(v).at(w)){
 				ck.at(i).at(n) = key.at(v).at(w);
-				c++;
-
-				if ( c >= key.front().size()){
-					b++;
-					c=0;
-					if ( b > key.size()){
-						b=0;
-					}
-				}
 			}
 		}
 	}
 	key = ck;
 }
 
-
-/////////////////////////////////////////////////////////////////////////////// Ancienne gen lp
-vector<vector<int>> generate_landing_points(vector<vector<bitset<8>>> &grid, int sfactor){
-
-	vector<vector<int>> landing_points;
-	vector<int> prow;
-	vector<int> row;
-
-	for (int i=0; i < grid.at(i).size(); i++){
-		for (int n=0; n < grid.at(i).size(); n++){
-			prow.push_back(n);
-		}
-	}
-
-	for (int d=0; d < grid.at(d).size(); d++){
-		for (int e=0; e < grid.at(d).size(); e++)
-			row.push_back(prow[e + (sfactor * d)%grid.at(d).size()]);
-		
-		landing_points.push_back(row);
-		row.clear();
-	}
-	return landing_points;
-}
-
-
+//Fonction inutilisée dont le but aurait été d'appliquer la multiplication dans le champ de Galois d'AES
+//L'opération MixColumns que nous réalisons n'étant pas la transformation de RijnDael elle ne sert pas
 /*
 bitset<8> gamul(bitset<8> a, bitset<8> b) {
 
@@ -175,13 +152,13 @@ bitset<8> gamul(bitset<8> a, bitset<8> b) {
 }
 */
 
-
+//Fonction qui étale l'information d'un octet sur toute sa colonne
 void row_sign(vector<bitset<8>> &set){
 
 	vector<bitset<8>> cset;
-
 	cset = set;
 
+	// La syntaxe est horrible car le developpeur a cassé son écran en essayant d'utiliser des expressions logiques
 	cset[0][7] = set[0][7];
 	cset[0][6] = set[0][6];
 	cset[0][5] = set[1][7];

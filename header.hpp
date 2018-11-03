@@ -85,4 +85,13 @@ void Blockify( string& msg, vector<string>& blocs);
 void printBytes(vector<string> v_s);
 ///////////////////////////////////
 
+////////////////////////////////Fonctions de hashage
+string Hashage(string& msg);
+void fctXOR_Hash(vector<vector<bitset<8>>> &grid, vector<bitset<8>> &hashCode);
+void Xor2HashCode(vector<bitset<8>> &hashCode,vector<bitset<8>> &hashCodeSeconde, vector<bitset<8>> &hashCodeFinal);
+string hashCode_to_str( vector<bitset<8>> &hashCode);
+bool CompareHashcode(string hashCodeRecu,string monHashCode);
+void FormatSendHashCode(vector<bitset<8>> &hashCodeFinal);
+//////////////////////////////////////
+
 #endif // HEAD_H
