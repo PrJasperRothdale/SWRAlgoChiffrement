@@ -11,7 +11,7 @@
 
 using namespace std;
 
-void Hashage(string& msg);
+string Hashage(string& msg);
 void fctXOR_Hash(vector<vector<bitset<8>>> &grid, vector<bitset<8>> &hashCode);
 void Xor2HashCode(vector<bitset<8>> &hashCode,vector<bitset<8>> &hashCodeSeconde, vector<bitset<8>> &hashCodeFinal);
 string hashCode_to_str( vector<bitset<8>> &hashCode);
