@@ -17,7 +17,7 @@ string Hashage(string& msg)
 	fctXOR_Hash(grid,hashCodeSecond);
 	Xor2HashCode(hashCode,hashCodeSecond,hashCodeFinal);
 	FormatSendHashCode(hashCodeFinal);
-	return hashCodeFinal;
+	return hashCode_to_str(hashCodeFinal);
 
 }
 
@@ -55,7 +55,7 @@ void Xor2HashCode(vector<bitset<8>> &hashCode,vector<bitset<8>> &hashCodeSeconde
 }
 
 
-string hashCode_to_str( vector<bitset<8>> &hashCode){
+string hashCode_to_str(vector<bitset<8>> &hashCode){
 
 	stringstream ss;
 
@@ -64,9 +64,9 @@ string hashCode_to_str( vector<bitset<8>> &hashCode){
 	return ss.str();
 }
 
-bool CompareHashcode(vector<bitset<8>> &hashCodeRecu,vector<bitset<8>> &monHashCode)
+bool CompareHashcode(string hashCodeRecu,string monHashCode)
 {
-	if(hashCode_to_str(hashCodeRecu) == hashCode_to_str(monHashCode))
+	if(hashCodeRecu == monHashCode)
 		return true;
 	return false;
 }
@@ -84,5 +84,5 @@ void FormatSendHashCode(vector<bitset<8>> &hashCodeFinal)
 	{
 		hashCodeFilled.push_back(bnull);
 	}
-	hashCodeFinal = hashCodeFilled; 
+	hashCodeFinal = hashCodeFilled;
 }

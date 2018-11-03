@@ -506,7 +506,7 @@ void out_2dint(vector<vector<int>> &vec){
 }
 
 
-void Hashage(string& msg)
+string Hashage(string& msg)
 {
 	vector<string> mblocs;
 	vector<vector<bitset<8>>> grid;
@@ -515,7 +515,6 @@ void Hashage(string& msg)
 	vector<bitset<8>> hashCodeSecond;
 	vector<bitset<8>> hashCodeFinal;
 	int nbBlocks = Blockify(msg, mblocs);
-	cout << "Le nb de blocks par rapport au message est de " << nbBlocks;
 	vstr_to_bitgrid(mblocs, grid);
 	fctXOR_Hash(grid,hashCode);
 	for(int i = 0; i < 3; i++)
@@ -525,13 +524,8 @@ void Hashage(string& msg)
 	}
 	fctXOR_Hash(grid,hashCodeSecond);
 	Xor2HashCode(hashCode,hashCodeSecond,hashCodeFinal);
-	cout << "\nHashcode : " << hashCode_to_str(hashCodeFinal);
-	cout << "\nHashcode 2: " << hashCode_to_str(hashCodeFinal);
-	if(CompareHashcode(hashCodeFinal,hashCodeFinal))
-		cout << "Message integre";
-	else
-		cout << "Message non integre";
 	FormatSendHashCode(hashCodeFinal);
+	return hashCode_to_str(hashCodeFinal);
 
 }
 
@@ -569,7 +563,7 @@ void Xor2HashCode(vector<bitset<8>> &hashCode,vector<bitset<8>> &hashCodeSeconde
 }
 
 
-string hashCode_to_str( vector<bitset<8>> &hashCode){
+string hashCode_to_str(vector<bitset<8>> &hashCode){
 
 	stringstream ss;
 
@@ -578,9 +572,9 @@ string hashCode_to_str( vector<bitset<8>> &hashCode){
 	return ss.str();
 }
 
-bool CompareHashcode(vector<bitset<8>> &hashCodeRecu,vector<bitset<8>> &monHashCode)
+bool CompareHashcode(string hashCodeRecu,string monHashCode)
 {
-	if(hashCode_to_str(hashCodeRecu) == hashCode_to_str(monHashCode))
+	if(hashCodeRecu == monHashCode)
 		return true;
 	return false;
 }
@@ -598,5 +592,5 @@ void FormatSendHashCode(vector<bitset<8>> &hashCodeFinal)
 	{
 		hashCodeFilled.push_back(bnull);
 	}
-	cout << "\nLength hashcode finale : " <<  hashCodeFilled.size();
+	hashCodeFinal = hashCodeFilled;
 }

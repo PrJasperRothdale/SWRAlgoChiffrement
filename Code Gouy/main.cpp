@@ -14,7 +14,11 @@ int main(int argc, char *argv[])
 	string msg (argv[1]);
 	string k ("12344321");
 
-	Hashage(msg);
+	
+	string hash = Hashage(msg);
+	cout << "\n" << hash;
+	if(CompareHashcode(hash,hash))
+		cout << "C'est les mêmes";
 
 	return 0;
 }
