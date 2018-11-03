@@ -118,11 +118,11 @@ int main()
 
 	string encMes = encrypt(e, message, n);
 
-	cout << encMes << endl;
+	cout << "Enc : " << encMes << endl;
 
 	string decMes = decrypt(d, encMes, n);
 
-	cout << decMes << endl;
+	cout << "Dec : " << decMes << endl;
 
 	cin >> message;
 }

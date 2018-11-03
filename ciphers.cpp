@@ -2,178 +2,65 @@
 
 using namespace std;
 
-string Encrypt( string &msg, string &key)
+//Fonction d'encryption symmetrique
+string encrypt( string msg, string key)
 {
 	vector<string> mblocs;
 	vector<string> kblocs;
 	vector<vector<bitset<8>>> grid;
 	vector<vector<bitset<8>>> grek;
 
-
-	// 1 - Transformer le message en tableau de blocs
-	int nbB = Blockify(msg, mblocs);
-	int nbBK = Blockify(key, kblocs);
-
-	cout << "NB Blocs message est : " << nbB << endl;
-	cout << "NB blocs clé est : " << nbBK << endl;
-
-	for(int i=0; i < mblocs.size(); i++){
-		cout << "Bloc Numero " << i << " : " << mblocs.at(i) << endl;
-	}
-
-	for(int i=0; i < kblocs.size(); i++){
-		cout << "Bloc Numero " << i << " : " << kblocs.at(i) << endl;
-	}
-
-/*
-	cout << endl << "String :";
-	for (int i=0; i < kblocs.size(); i++){
-		cout << kblocs.at(i);
-	}
-	cout << endl;
-*/
-	vstr_to_bitgrid(kblocs, grek);
+	//Transformation de message en blocs puis en matrice d'octets
+	Blockify(msg, mblocs);
+	Blockify(key, kblocs);
 	vstr_to_bitgrid(mblocs, grid);
+	vstr_to_bitgrid(kblocs, grek);
 
-	//cout << "Texte : <" << grid_to_str(grid) << ">";
+	//Extension de la clé par replication pour avoir la même taille que le message
+	extend_key_set(grid,grek);
+
+	// 2 - Chiffrer le message
+	for (int i=0; i < 13; i++){
+		
+		mix_columns(grid);
+		shift_rows(grid);
+		cipher(grid,grek);
+	}
 /*
-	extend_key_set(grid, grek);
-	cout << endl << "Clai :" << endl;
-	out_grid(grek);
+	cout << endl << "Message après chiffrement :" << endl;
+	out_grid(grid);
+	cout << "Texte : <" << grid_to_str(grid) << ">";
 */
+	return grid_to_str(grid);
 
-	extend_key_set(grid, grek);
-/*
-	cout << endl << "Input Grid : " << endl;
-	out_grid(grid);
-
-	cout << endl << "Input Key : " << endl;
-	out_grid(grek);
-
-	cipher(grid, grek);
-	cout << endl << "Output : " << endl;
-	out_grid(grid);
-*/
-
-
-
-
-/*                                                 CHAINED MIXING AND UNMIXING */
-	cout << endl << "Matrice input :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	cipher(grid, grek);
-	mix_columns(grid);
-	shift_rows(grid);
-	cout << endl << "Crypto 1 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	cipher(grid, grek);
-	mix_columns(grid);
-	shift_rows(grid);
-	cout << endl << "Crypto 2 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	cipher(grid, grek);
-	mix_columns(grid);
-	shift_rows(grid);
-	cout << endl << "Crypto 3 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	cipher(grid, grek);
-	mix_columns(grid);
-	shift_rows(grid);
-	cout << endl << "Crypto 4 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	cipher(grid, grek);
-	mix_columns(grid);
-	shift_rows(grid);
-	cout << endl << "Crypto 5 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	cipher(grid, grek);
-	mix_columns(grid);
-	shift_rows(grid);
-	cout << endl << "Crypto 6 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	cipher(grid, grek);
-	cout << endl << "Crypto -5 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	cipher(grid, grek);
-	cout << endl << "Crypto -4 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	cipher(grid, grek);
-	cout << endl << "Crypto -3 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	cipher(grid, grek);
-	cout << endl << "Crypto -2 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	cipher(grid, grek);
-	cout << endl << "Crypto -1 :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-
-	shift_rows(grid, -1);
-	mix_columns(grid);
-	cipher(grid, grek);
-	cout << endl << "Message :" << endl;
-	out_grid(grid);
-	cout << "Texte : <" << grid_to_str(grid) << ">";
-/**/
-
-
-
-	//shift_rows(grid, -1);
-	//mix_columns(grid);
-	//cout << endl << "Matrice out :" << endl;
-	//out_grid(grid);
-	//cout << "Texte : <" << grid_to_str(grid) << ">";
-
-
-	//shift_rows(grid, -1);
-	//cout << endl << endl << "Apres Shifting :" << endl;
-	//out_grid(grid);
-	//mix_columns(grid);
-	//bitset<8> a('k');
-	//bitset<8> b('L');
-
-	//bitset<8> c = gamul(a,b);
-	//cout << "C gamuled =" << c << endl;
-
-	
- 
-	return msg;
 }
 
-int Blockify( string& msg, vector<string>& blocs){
+string decrypt(string msg, string key){
+	cout << endl << "Message : " << msg << " Key : " << key << endl;
+	vector<string> mblocs;
+	vector<string> kblocs;
+	vector<vector<bitset<8>>> grid;
+	vector<vector<bitset<8>>> grek;
+
+	// 1 - Transformer le message en tableau de blocs
+	Blockify(msg, mblocs);
+	Blockify(key, kblocs);
+
+	vstr_to_bitgrid(mblocs, grid);
+	vstr_to_bitgrid(kblocs, grek);
+
+	extend_key_set(grid,grek);
+
+	for (int i=0; i < 13; i++){
+		cipher(grid, grek);
+		shift_rows(grid, -1);
+		mix_columns(grid);
+	}
+
+	return grid_to_str(grid);
+}
+
+void Blockify( string& msg, vector<string>& blocs){
 
 	const int _taille_bloc_ = 4;
 
@@ -191,38 +78,20 @@ int Blockify( string& msg, vector<string>& blocs){
 
 	}
 
-	return nbBlocs;
-}
 
-void Cipher( vector<string> &blocs, vector<string> &key){
-
-
-	vector<string> cryptogram;
-
-	//cout << "La taille de la clé est : " << key.size() << endl ;
-
-	for(int i = 0; i < blocs.size(); i++){
-		string cip = (blocs.at(i));
-		cryptogram.push_back(cip);
-	}
-/*
-	for(int i=0; i < cryptogram.size(); i++){
-		cout << "Bloc Numero " << i << " : " << cryptogram.at(i) << endl;
-	}
-*/
-	cout << endl << "This message by bytes:" << endl << endl << setbase(64);
 }
 
 void cipher(vector<vector<bitset<8>>> &grid, vector<vector<bitset<8>>> &key){
 
 	vector<vector<bitset<8>>> cg;
-
 	cg = grid;
 
-	for (int i=0; i < grid.size(); i++)
-		for (int n=0; n < grid.at(i).size(); n++)
+	for (int i=0; i < grid.size(); i++){
+		for (int n=0; n < grid.at(i).size(); n++){
 			cg.at(i).at(n) = grid.at(i).at(n) ^ key.at(i).at(n);
-		
+		}
+	}
+	
 	grid = cg;
 }
 
@@ -366,7 +235,6 @@ vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor){
 	vector<int> prow;
 	vector<int> row;
 
-
 	for (int i=0; i < grid.at(i).size(); i++){
 		prow.push_back(i);
 	}
@@ -394,7 +262,6 @@ vector<vector<int>> lb_colshift(vector<vector<bitset<8>>> &grid, int sfactor){
 			row.clear();
 		}
 	}
-
 	//cout << endl << "Land points : " << endl;
 	//out_2dint(landing_points);
 
@@ -408,12 +275,12 @@ void shift_rows(vector<vector<bitset<8>>> &grid, int sfactor){
 	n_val = grid;
 	vector<vector<int>> landing_points;
 
+
 	landing_points = lb_colshift(grid, sfactor);
 
 	for (int i=0; i < n_val.size() ; i++){
 		for (int n=0; n < n_val.at(i).size(); n++){
 			n_val.at(i).at(n) = grid.at(landing_points[i][n]).at(n);
-
 		}
 	}
 

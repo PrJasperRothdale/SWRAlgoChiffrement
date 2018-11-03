@@ -3,16 +3,9 @@
 using namespace std;
 
 
-////////////////////////////endpoints
-
-/////////////////////////////////////
-
-
-
-
-
-int main(int argc, char **argv)
+int main(int argc, char *argv[])
 {
+
 	if (!InitialiseWinsock())
 	{
 		cout << endl << "Erreur d'initialisation des sockets";
