@@ -66,9 +66,10 @@ int Agnes()
 	cin.getline(input,sizeof(input));
 	string m(input);
 
-	//Chiffrement et envoi du message par la clé partagée
+	//Creation d'une copie message pour le hashage et du hashcode
 	string messageCopie = m;
 	string hashCode = hashage(messageCopie);
+	//Chiffrement et envoi du message par la clé partagée
 	message = encrypt(m, keyAB);
 	string messageSend = message + hashCodeSignature +  hashCode;
 	handshake(messageSend, BERNARD_PORT, BERNARD_ADRESS, AGNES_PORT);
@@ -123,8 +124,10 @@ int Bernard()
 	string hashCodeReceive = rep.substr(posHashCode + 1, rep.size());
 	//Déchiffrement et Affichage en Sortie
 	message = decrypt(message_rep,keyAB);
+	//Creation d'une copie message pour le hashage et du hashcode
 	string messageCopie = message;
 	string hashCodeReCreate = hashage(messageCopie);
+	//Comparaison des deux hashcode
 	if(compare_hashcode(hashCodeReceive,hashCodeReCreate))
 		cout << "Message integre";
 	else
