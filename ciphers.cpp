@@ -29,6 +29,7 @@ string encrypt( string msg, string key)
 		cipher(grid,grek);
 		cout << "\n\nAffichage de la grid à l'etape" << i << " de notre boucle:\n";
 		out_grid(grid);
+		cout << "\nCorrespondance de notre gri en texte : \n<" << grid_to_str(grid) << ">";
 	}
 
 	//Renvoi du message en forme string
@@ -63,6 +64,7 @@ string decrypt(string msg, string key){
 		mix_columns(grid);
 		cout << "\n\nAffichage de la grid à l'etape" << i << " de notre boucle:\n";
 		out_grid(grid);
+		cout << "\nCorrespondance de notre gri en texte : \n<" << grid_to_str(grid) << ">";
 	}
 
 	//Retour sous forme de string
