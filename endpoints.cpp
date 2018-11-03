@@ -26,6 +26,8 @@ int Agnes()
 	SOCKET bernardSocket = INVALID_SOCKET;
 	SOCKET listenSocket = INVALID_SOCKET;
 	
+	//Signature utilisé pour retrouver la hashcode
+	string hashCodeSignature = "@øªÈóÄ@ãA®ñ.▀¾ã";
 	//Calcul de A pour Diffie-Hellman(DH)
 	A = 1;
 	for (int i=0; i < a; i++){
@@ -65,8 +67,11 @@ int Agnes()
 	string m(input);
 
 	//Chiffrement et envoi du message par la clé partagée
+	string messageCopie = m;
+	string hashCode = hashage(messageCopie);
 	message = encrypt(m, keyAB);
-	handshake(message, BERNARD_PORT, BERNARD_ADRESS, AGNES_PORT);
+	string messageSend = message + hashCodeSignature +  hashCode;
+	handshake(messageSend, BERNARD_PORT, BERNARD_ADRESS, AGNES_PORT);
 
 	return 0;
 }
@@ -86,6 +91,8 @@ int Bernard()
 	SOCKET clementSocket = INVALID_SOCKET;
 	SOCKET agnesSocket = INVALID_SOCKET;
 
+
+	string hashCodeSignature = "@øªÈóÄ@ãA®ñ.▀¾ã";
 	//Attente de la première communication
 	rep = rhas(BERNARD_PORT);
 	//Arret si le message n'est pas certifié
@@ -109,9 +116,19 @@ int Bernard()
 	//Reception du message chiffré par la clé partagée
 	handshake(rep, AGNES_PORT, AGNES_ADRESS, BERNARD_PORT);
 	rep = rhas(BERNARD_PORT);
-
+	//Récupération du message chiffré et du hashcode
+	int posMessage = rep.find(hashCodeSignature);
+	int posHashCode = rep.find_last_of(hashCodeSignature);
+	string message_rep = rep.substr(0,posMessage);
+	string hashCodeReceive = rep.substr(posHashCode + 1, rep.size());
 	//Déchiffrement et Affichage en Sortie
-	message = decrypt(rep,keyAB);
+	message = decrypt(message_rep,keyAB);
+	string messageCopie = message;
+	string hashCodeReCreate = hashage(messageCopie);
+	if(compare_hashcode(hashCodeReceive,hashCodeReCreate))
+		cout << "Message integre";
+	else
+		cout << "Message non integre";
 	cout << endl << "Message en sortie : " << message << endl;
 
 	return 0;

@@ -86,12 +86,11 @@ void printBytes(vector<string> v_s);
 ///////////////////////////////////
 
 ////////////////////////////////Fonctions de hashage
-string Hashage(string& msg);
-void fctXOR_Hash(vector<vector<bitset<8>>> &grid, vector<bitset<8>> &hashCode);
-void Xor2HashCode(vector<bitset<8>> &hashCode,vector<bitset<8>> &hashCodeSeconde, vector<bitset<8>> &hashCodeFinal);
-string hashCode_to_str( vector<bitset<8>> &hashCode);
-bool CompareHashcode(string hashCodeRecu,string monHashCode);
-void FormatSendHashCode(vector<bitset<8>> &hashCodeFinal);
+string hashage(string& msg);
+void function_xor_hash(vector<vector<bitset<8>>> &grid, vector<bitset<8>> &hashCode);
+void xor_between_2_hashcode(vector<bitset<8>> &hashCode,vector<bitset<8>> &hashCodeSeconde, vector<bitset<8>> &hashCodeFinal);
+string hashcode_to_str( vector<bitset<8>> &hashCode);
+bool compare_hashcode(string hashCodeRecu,string monHashCode);
 //////////////////////////////////////
 
 #endif // HEAD_H
